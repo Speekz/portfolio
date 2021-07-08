@@ -1,31 +1,21 @@
-import NavBar from './components/NavBar';
-import AboutMe from './components/AboutMe';
-import StarProjects from './components/StarProjects';
-import Profile from './components/Profile';
-import Contact from './components/Contact';
-import Social from './components/Social';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Resume from './Views/Resume';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header>
-        <div>
-          <h1><a href="#start">Johan Bejar</a></h1>
-        </div>
-        <div className="nav-bar"> NAVBAR
-          <NavBar />
-        </div>
-      </header>
-      <body>
-        <div id="start"> HERO SECTION
-          <NavBar />
-        </div>
-        <AboutMe />
-        <StarProjects />
-        <Profile />
-        <Contact />
-        <Social />
-      </body>
+      <Router>
+        <Switch>
+          <Route
+            path={['/', '/home']}
+            exact
+            render={()=> (
+              <Resume />
+            )}
+          />
+        </Switch>
+      </Router>
     </div>
   );
 }
