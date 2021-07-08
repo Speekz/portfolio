@@ -23,7 +23,7 @@ const StarProjects = () => {
                   predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.
                 </li>
               </ul>
-              <a href="https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6">Springer article about TCO</a>
+              <a href="https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6" target="_blank" rel="noopener noreferrer">Springer article about TCO</a>
             </div>
           </div>
         </div>
@@ -47,8 +47,8 @@ const StarProjects = () => {
                   network.
                 </li> 
               </ul>
-              <a href="https://github.com/Speekz/RUNashville">Github FrontEnd</a>
-              <a href="https://github.com/Speekz/RUNashville-backend">Github Backend</a>
+              <a href="https://github.com/Speekz/RUNashville" target="_blank" rel="noopener noreferrer">Github FrontEnd</a>
+              <a href="https://github.com/Speekz/RUNashville-backend" target="_blank" rel="noopener noreferrer">Github Backend</a>
             </div>
           </div>
         </div>
