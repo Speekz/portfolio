@@ -4,7 +4,7 @@ const StarProjects = () => {
       <div className="star-projects">
         <div className="project-1">
           <div className="project-image">
-            <img src="/images/TCO_APP.jgp" alt="No Gorditos / TCO APK" width="300" height="300"></img>
+            <img src="/images/no_gorditos_tco.png" alt="No Gorditos / TCO APK" width="100%" height="100%"></img>
           </div>
           <div className="project-content">
             <div className="project-details">
