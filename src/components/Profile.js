@@ -3,6 +3,7 @@ import { SKILLS_LIST } from "../lib"
 const Profile = () => {
   return (
     <div id="profile" className="section-profile">
+      <h2>Profile</h2>
       <div> 
         {SKILLS_LIST.map(skill => (
           <p key={skill}>{skill}</p>

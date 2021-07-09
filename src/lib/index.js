@@ -1,3 +1,49 @@
+export const PROJECTS = [
+  {
+    title: 'TCO APP',
+    image: {
+      source: 'no_gorditos_tco.png',
+      alt: 'No Gorditos / TCO'
+    },
+    description: 'Telemonitoring mobile application for pediatric obesity checks',
+    details: [
+      `Supported both remote monitoring automatically through rules and manually via a specialist to registered
+      patients with an Android Application, reducing child onboarding time to the program by 83% from 2 hours to
+      10 minutes.`,
+      `Delivered health reports about patients considering factors like prescriptions and caregiver participation on a
+      predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.`
+    ],
+    links: {
+      title: 'Springer article about TCO' ,
+      link: 'https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6'
+    }
+  },
+  {
+    title: 'RUNashville',
+    image: {
+      source: 'runashville.png',
+      alt: 'RUNashville'
+    },
+    description: 'Social Media and Events Platform for Runners',
+    details: [
+      `Modeled highly-scalable API services on NodeJS connecting the RUNashville website to events platforms,
+      reducing time to launch an event to 15 minutes from 45 minutes average.`,
+      `Developed signup and login pages on React with cryptographic, securing password handling through the
+      network.`
+    ],
+    links: [
+      {
+        title: 'RUNashville FrontEnd' ,
+        link: 'https://github.com/Speekz/RUNashville'
+      },
+      {
+        title: 'RUNashville Backend' ,
+        link: 'https://github.com/Speekz/RUNashville-backend'
+      }
+    ]
+  }
+]
+
 export const SKILLS_LIST = [
   "JAVASCRIPT",
   "REACT",
