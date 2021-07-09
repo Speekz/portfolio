@@ -10,7 +10,7 @@ const StarProjects = () => {
             <div className="project-details">
               <div className="project-title">
                 <h2>TCO APP</h2>
-                <text>Telemonitoring mobile application for pediatric obesity checks</text>
+                <p>Telemonitoring mobile application for pediatric obesity checks</p>
               </div>
               <ul>
                 <li>
@@ -35,7 +35,7 @@ const StarProjects = () => {
             <div className="project-details">
               <div className="project-title">
                 <h2>RUNashville</h2>
-                <text>Social Media and Events Platform for Runners</text>
+                <p>Social Media and Events Platform for Runners</p>
               </div>
               <ul>
                 <li>

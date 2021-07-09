@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
 
 import NavBar from '../components/NavBar';
 import AboutMe from '../components/AboutMe';
@@ -8,54 +7,23 @@ import Profile from '../components/Profile';
 import Contact from '../components/Contact';
 import Social from '../components/Social';
 
-import { DEVICE } from '../lib';
-
-let displayNavBar = false;
-
-const HeaderBar = styled.header`
-  background-color: yellow;
-  display: flex;
-  font-size: 1em;
-  align-items: center;
-
-  @media ${DEVICE.laptop} {
-    font-size: 1.2em;
-    ${displayNavBar = true}
-  }
-`;
-
-const HeaderTitle = styled.h1`
-  font-size: 1em;
-
-  @media ${DEVICE.laptop} {
-    font-size: 1.2em;
-  }
-`;
+import { DEVICE_MIN } from '../lib';
 
 const Resume = () => {
-  const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth
-  });
-
-  useEffect(() => {
-
-  },);
-
-
   return (
     <div>
-      <HeaderBar>
-        <div>
-          <HeaderTitle><a href="#start">Johan Bejar</a></HeaderTitle>
-        </div>
-        <div className="nav-bar"> NAVBAR
-          <NavBar />
-        </div>
-      </HeaderBar>
+      <NavBar />
       <div>
-        <div id="start"> HERO SECTION
-          <NavBar />
+        <div id="start">
+          <HeroSection>
+            <div>
+              <a href="#about-me">ABOUT ME</a>
+              <a href="#projects">PROJECTS</a>
+              <a href="#profile">PROFILE</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#socials">SOCIALS</a>
+            </div>
+          </HeroSection>
         </div>
         <AboutMe />
         <StarProjects />
@@ -66,5 +34,14 @@ const Resume = () => {
     </div>
   );
 }
+
+ 
+const HeroSection = styled.div`
+  display: none;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: block;
+  }
+`;
 
 export default Resume;

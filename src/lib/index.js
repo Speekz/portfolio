@@ -16,6 +16,8 @@ export const SKILLS_LIST = [
   "VIM",
   "FIREBASE",
   "AWS",
+  "WEBHOOKS",
+  "AUTHENTICATION"
 ];
 
 const screenSize = {
@@ -28,7 +30,7 @@ const screenSize = {
   desktop: '2560px'
 };
 
-export const DEVICE = {
+export const DEVICE_MIN = {
   mobileS: `(min-width: ${screenSize.mobileS})`,
   mobileM: `(min-width: ${screenSize.mobileM})`,
   mobileL: `(min-width: ${screenSize.mobileL})`,
@@ -37,4 +39,15 @@ export const DEVICE = {
   laptopL: `(min-width: ${screenSize.laptopL})`,
   desktop: `(min-width: ${screenSize.desktop})`,
   desktopL: `(min-width: ${screenSize.desktop})`
+};
+
+export const DEVICE_MAX = {
+  mobileS: `(max-width: ${screenSize.mobileS})`,
+  mobileM: `(max-width: ${screenSize.mobileM})`,
+  mobileL: `(max-width: ${screenSize.mobileL})`,
+  tablet: `(max-width: ${screenSize.tablet})`,
+  laptop: `(max-width: ${screenSize.laptop})`,
+  laptopL: `(max-width: ${screenSize.laptopL})`,
+  desktop: `(max-width: ${screenSize.desktop})`,
+  desktopL: `(max-width: ${screenSize.desktop})`
 };
