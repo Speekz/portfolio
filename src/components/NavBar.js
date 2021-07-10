@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <HeaderBar>
       <HeaderTitle>
-        <a href="#start">Johan Bejar</a>
+        <Logo href="/">Johan Bejar</Logo>
       </HeaderTitle>
       <Hamburger onClick={() => { setMenuIsOpen(!menuIsOpen) }}>
         <span />
@@ -18,7 +18,7 @@ const NavBar = () => {
       <Menu menuIsOpen={menuIsOpen}>
           <MenuLink href="#about-me">ABOUT ME</MenuLink>
           <MenuLink href="#projects">PROJECTS</MenuLink>
-          <MenuLink href="#profile">PROFILE</MenuLink>
+          <MenuLink href="#skills">SKILLS</MenuLink>
           <MenuLink href="#contact">CONTACT</MenuLink>
           <MenuLink href="#socials">SOCIALS</MenuLink>
       </Menu>
@@ -34,7 +34,7 @@ const Hamburger = styled.div`
   span {
     height: 2px;
     width: 25px;
-    background: black;
+    background: white;
     margin-bottom: 4px;
     border-radius: 5px;
   }
@@ -65,10 +65,16 @@ const MenuLink = styled.a`
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in;
+  color: #FFFFFF;
 
   &:hover {
     color: #FFFFFF;
   }
+`;
+
+const Logo = styled.a`
+  color: #FFFFFF;
+  text-decoration: none;
 `;
 
 const HeaderTitle = styled.h1`
@@ -81,13 +87,16 @@ const HeaderTitle = styled.h1`
 `;
 
 const HeaderBar = styled.header`
-  background-color: yellow;
+  background-color: transparent;
   display: flex;
   font-size: 1em;
   padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  z-index: 10;
+  position: fixed;
+  mix-blend-mode: difference;
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;

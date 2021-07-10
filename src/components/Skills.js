@@ -1,9 +1,9 @@
 import { SKILLS_LIST } from "../lib"
 
-const Profile = () => {
+const Skills = () => {
   return (
-    <div id="profile" className="section-profile">
-      <h2>Profile</h2>
+    <div id="skills" className="section-skills">
+      <h2>Skills</h2>
       <div> 
         {SKILLS_LIST.map(skill => (
           <p key={skill}>{skill}</p>
@@ -16,4 +16,4 @@ const Profile = () => {
   )
 }
 
-export default Profile;
+export default Skills;
