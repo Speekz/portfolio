@@ -1,37 +1,99 @@
 import styled from "styled-components"
+import { DEVICE_MAX, DEVICE_MIN } from "../lib";
 
 const AboutMe = () => {
   return (
-    <div id="about-me" className="section-about-me">
-      <AboutMeBlock className="text-about-me">
-        <AboutMeQuestion>Who am I?</AboutMeQuestion>
-        <AboutMeAnswer>I'm a software developer with a tech stack based in the JavaScript programming language. I also have a bachelor's in system engineering and a cybersecurity manager specialist that has worked in Financial services companies for 4 years. My experience as a system engineer allows me to understand, design, and develop large-scale applications that will be consumed by future clients with deep care about security while doing it.</AboutMeAnswer>
+    <HeroSection id="about-me">
+      <AboutMeBlock>
+        <QuestionBlock>
+          <AboutMeQuestion>
+            Systems and
+          </AboutMeQuestion>
+          <AboutMeQuestionHighlight>
+            Software
+          </AboutMeQuestionHighlight>
+          <AboutMeQuestion>
+            Engineer
+          </AboutMeQuestion>
+        </QuestionBlock>
+        <AnswerBlock>
+          <AboutMeAnswer>
+            {`I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a system engineer allows me to `}
+            <HighlightAnswer>
+               understand, design, and develop large-scale web applications.
+            </HighlightAnswer>
+          </AboutMeAnswer>
+        </AnswerBlock>
       </AboutMeBlock>
       <div className="image-about-me">
         <ProfilePic src="/images/johan_bejar.jpg" alt="Johan Bejar profile" />
       </div>
-    </div>
+    </HeroSection>
   )
 }
 
-const AboutMeQuestion = styled.h2`
+const HighlightAnswer = styled.span`
+  color: #34AA8D;
 `;
 
 const AboutMeAnswer = styled.p`
-  text-align: justify;
+  line-height: 1.225;
+  padding: 0 15%;
+  font-size: 0.928em;
+`;
+
+const AnswerBlock = styled.div`
+  text-transform: uppercase;
+  font-family: Morton-light;
+  letter-spacing: 0.1em;
+`;
+
+const QuestionBlock = styled.div`
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+`;
+
+const AboutMeQuestion = styled.div`
+  font-size: 2em;
+`;
+
+const AboutMeQuestionHighlight = styled.div`
+  font-family: Morton-Bold;
+  margin-left: auto;
+  font-size: 3.5em;
+  color: #34AA8D;
 `;
 
 const AboutMeBlock = styled.div`
   display: flex;
-  background: pink;
   flex-direction: column;
   padding: 0 5%;
+  position: absolute;
+  bottom: 3.125vh;
+  left: 0;
 `;
 
 const ProfilePic = styled.img`
   width: 100%;
-  heigth: 100%
-  object-fit: cover
+  heigth: 100%;
+  object-fit: cover;
+  display: none;
+
+  @media ${DEVICE_MIN.tablet} {
+    display: block;
+  }
+`;
+
+const HeroSection = styled.div`
+  height: 50vh;
+  position: relative;
+  padding 0;
+
+  @media ${DEVICE_MAX.tablet} {
+    padding-top: 50vh;
+  }
 `;
 
 export default AboutMe;

@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div id="contact" className="section-contact">
       <div className="contact-title">
-        <p>CONTACT ME</p>
+        <h2>CONTACT ME</h2>
       </div>
       <div className="contact-body">
         <div className="contact-inquiry-title">
@@ -16,6 +16,6 @@ const Contact = () => {
       </div>
     </div>
   )
-}
+};
 
 export default Contact;

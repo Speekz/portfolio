@@ -1,3 +1,51 @@
+@import url('normalize.css');
+
+@font-face {
+  font-family: 'Morton-Thin';
+  src: url('fonts/Morton/Morton-Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-ExtraLight';
+  src: url('fonts/Morton/Morton-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Light';
+  src: url('fonts/Morton/Morton-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Book';
+  src: url('fonts/Morton/Morton-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Regular';
+  src: url('fonts/Morton/Morton-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Medium';
+  src: url('fonts/Morton/Morton-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Bold';
+  src: url('fonts/Morton/Morton-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-ExtraBold';
+  src: url('fonts/Morton/Morton-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Morton-Black';
+  src: url('fonts/Morton/Morton-Black.otf') format('opentype');
+  font-size: 900;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -6,13 +54,102 @@ html, body {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Morton',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #232426;
+  color: #FFFFFF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@-webkit-keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+@keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+    transform: translate(-10%, 10%);
+  }
 }

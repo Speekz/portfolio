@@ -1,65 +1,122 @@
+import styled from "styled-components";
+
+import { DEVICE_MAX, PROJECTS } from "../lib";
+
 const StarProjects = () => {
   return (
-    <div id="projects" className="section-projects">
-      <div className="star-projects">
-        <div className="project-1">
-          <div className="project-image">
-            <img src="/images/no_gorditos_tco.png" alt="No Gorditos / TCO APK" width="100%" height="100%"></img>
-          </div>
-          <div className="project-content">
-            <div className="project-details">
-              <div className="project-title">
-                <h2>TCO APP</h2>
-                <p>Telemonitoring mobile application for pediatric obesity checks</p>
+    <div id="projects">
+      <h2>Projects</h2>
+      <div>
+        { PROJECTS.map((project) => (
+          <ProjectBox key={project.title}>
+            <ImageBox>
+              <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} />
+            </ImageBox>
+            <div>
+              <div>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectDescription>{project.description}</ProjectDescription>
               </div>
-              <ul>
-                <li>
-                  Supported both remote monitoring automatically through rules and manually via a specialist to registered
-                  patients with an Android Application, reducing child onboarding time to the program by 83% from 2 hours to
-                  10 minutes.
-                </li>
-                <li>
-                  Delivered health reports about patients considering factors like prescriptions and caregiver participation on a
-                  predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.
-                </li>
-              </ul>
-              <a href="https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6" target="_blank" rel="noopener noreferrer">Springer article about TCO</a>
+              <ProjectDetailsList>
+                {project.details.map((detail, index) => (
+                  <ProjectDetails key={index}>
+                    <span>
+                      {detail}
+                    </span>
+                  </ProjectDetails>
+                ))}
+              </ProjectDetailsList>
+              {project.links.map((links) => (
+                <ProjectLinks href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
+              ))}
             </div>
-          </div>
-        </div>
-        <div className="project-2">
-          <div className="project-image">
-            <img src="/images/RUNashville.jgp" alt="RUNashville" width="300" height="300"></img>
-          </div>
-          <div className="project-content">
-            <div className="project-details">
-              <div className="project-title">
-                <h2>RUNashville</h2>
-                <p>Social Media and Events Platform for Runners</p>
-              </div>
-              <ul>
-                <li>
-                  Modeled highly-scalable API services on NodeJS connecting the RUNashville website to events platforms,
-                  reducing time to launch an event to 15 minutes from 45 minutes average.
-                </li>
-                <li>
-                  Developed signup and login pages on React with cryptographic, securing password handling through the
-                  network.
-                </li> 
-              </ul>
-              <a href="https://github.com/Speekz/RUNashville" target="_blank" rel="noopener noreferrer">Github FrontEnd</a>
-              <a href="https://github.com/Speekz/RUNashville-backend" target="_blank" rel="noopener noreferrer">Github Backend</a>
-            </div>
-          </div>
-        </div>
+          </ProjectBox>
+        ))}
       </div>
-      <div className="more-projects">
-        <div className="invitation">
-          <a href="/projects">WANT TO SE MORE?</a>
-        </div>
-      </div>
+      <MoreProjectsBox>
+        <span>
+          WANT TO SEE 
+        </span>
+        <MoreProjectsText href="/projects">
+          <span>
+            MORE?
+          </span>
+        </MoreProjectsText>
+      </MoreProjectsBox>
     </div>
   )
 }
+
+const ProjectTitle = styled.h3`
+  font-size: 30px;
+  margin: 0.3em 0 0.1em;
+  font-family: Morton-bold
+`;
+
+const ProjectBox = styled.div`
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ImageBox = styled.div`
+  display: flex;
+`;
+
+const MoreProjectsBox = styled.div`
+  margin-left: 0;
+  margin-top: 6.25vh;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-size: 2em;
+    padding-left: 0;
+    line-height: 0.9;
+  }
+`;
+
+const MoreProjectsText = styled.a`
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-family: Morton-Black;
+
+  @media ${DEVICE_MAX.tablet} {
+    font-size: 3em;
+    padding-left: 0;
+  }
+`;
+
+const ProjectDescription = styled.p`
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  max-width: 160px;
+`;
+
+const ProjectDetailsList = styled.ul`
+  list-style-type: none;
+`;
+
+const ProjectDetails = styled.li`
+  span { 
+    position: relative;
+    left: -10px;
+  }
+`;
+
+const ProjectLinks = styled.a`
+  text-decoration: none;
+  color: white;
+  display: block;
+`;
 
 export default StarProjects;
