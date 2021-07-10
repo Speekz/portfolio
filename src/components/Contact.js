@@ -20,6 +20,7 @@ const Contact = () => {
 const ContactBox = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 10% 0;
 `;
 
 const ContactText = styled.h2`
