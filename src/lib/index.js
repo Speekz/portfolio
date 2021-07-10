@@ -1,6 +1,8 @@
+import _ from 'lodash';
+
 export const PROJECTS = [
   {
-    title: 'TCO APP',
+    title: 'NO GORDITOS / TCO APP',
     image: {
       source: 'no_gorditos_tco.png',
       alt: 'No Gorditos / TCO'
@@ -13,13 +15,13 @@ export const PROJECTS = [
       `Delivered health reports about patients considering factors like prescriptions and caregiver participation on a
       predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.`
     ],
-    links: {
+    links: [{
       title: 'Springer article about TCO' ,
       link: 'https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6'
-    }
+    }]
   },
   {
-    title: 'RUNashville',
+    title: 'RUNASHVILLE',
     image: {
       source: 'runashville.png',
       alt: 'RUNashville'
@@ -45,26 +47,81 @@ export const PROJECTS = [
 ]
 
 export const SKILLS_LIST = [
-  "JAVASCRIPT",
-  "REACT",
-  "EXPRESS",
-  "LINUX",
-  "HTML",
-  "CSS",
-  "JQUERY",
-  "MONGODB",
-  "MYSQL",
-  "JAVA",
-  "VISUAL-BASIC",
-  "PHP",
-  "C#",
-  "SQL-SERVER",
-  "VIM",
-  "FIREBASE",
-  "AWS",
-  "WEBHOOKS",
-  "AUTHENTICATION"
+  {
+    name: "JAVASCRIPT",
+    highlight: true,
+  },
+  {
+    name: "REACT",
+    highlight: true,
+  },
+  {
+    name: "NODEJS",
+    highlight: true,
+  },
+  {
+    name: "EXPRESS",
+    highlight: false,
+  },
+  {
+    name: "AXIOS",
+    highlight: false,
+  },
+  {
+    name: "LINUX",
+    highlight: false,
+  },
+  {
+    name: "HTML",
+    highlight: false,
+  },
+  {
+    name: "CSS",
+    highlight: false,
+  },
+  {
+    name: "JQUERY",
+    highlight: false,
+  },
+  {
+    name: "MONGODB",
+    highlight: false,
+  },
+  {
+    name: "MYSQL",
+    highlight: false,
+  },
+  {
+    name: "VISUAL-BASIC",
+    highlight: false,
+  },
+  {
+    name: "PHP",
+    highlight: false,
+  },
+  {
+    name: "SQL-SERVER",
+    highlight: false,
+  },
+  {
+    name: "VIM",
+    highlight: false,
+  },
+  {
+    name: "FIREBASE",
+    highlight: false,
+  },
+  {
+    name: "AWS",
+    highlight: false,
+  },
+  {
+    name: "WEBHOOKS",
+    highlight: false,
+  },
 ];
+
+export const SKILL_RANDOM = _.shuffle(SKILLS_LIST);
 
 const screenSize = {
   mobileS: '320px',

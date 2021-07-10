@@ -20,14 +20,14 @@ const AboutMe = () => {
           <AboutMeAnswer>
             {`I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a system engineer allows me to `}
             <HighlightAnswer>
-               understand, design, and develop large-scale applications.
+               understand, design, and develop large-scale web applications.
             </HighlightAnswer>
           </AboutMeAnswer>
         </AnswerBlock>
       </AboutMeBlock>
-      {/* <div className="image-about-me">
+      <div className="image-about-me">
         <ProfilePic src="/images/johan_bejar.jpg" alt="Johan Bejar profile" />
-      </div> */}
+      </div>
     </HeroSection>
   )
 }
@@ -77,11 +77,12 @@ const AboutMeBlock = styled.div`
 
 const ProfilePic = styled.img`
   width: 100%;
-  heigth: 100%
-  object-fit: cover
+  heigth: 100%;
+  object-fit: cover;
+  display: none;
 
-  @media ${DEVICE_MAX.tablet} {
-    display: none;
+  @media ${DEVICE_MIN.tablet} {
+    display: block;
   }
 `;
 

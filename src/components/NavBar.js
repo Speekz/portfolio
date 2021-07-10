@@ -75,6 +75,7 @@ const MenuLink = styled.a`
 const Logo = styled.a`
   color: #FFFFFF;
   text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const HeaderTitle = styled.h1`
@@ -97,6 +98,7 @@ const HeaderBar = styled.header`
   z-index: 10;
   position: fixed;
   mix-blend-mode: difference;
+  width: 80%;
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
