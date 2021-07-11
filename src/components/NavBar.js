@@ -92,6 +92,8 @@ const Menu = styled.div`
 `;
 
 const MenuLink = styled.a`
+  font-family: Morton-ExtraBold;
+  font-size: 3em;
   padding: 1rem 0.5rem;
   cursor: pointer;
   text-decoration: none;
@@ -99,10 +101,6 @@ const MenuLink = styled.a`
   color: #FFFFFF;
   align-self: flex-start;
   text-transform: uppercase;
-
-  &:hover {
-    color: #FFFFFF;
-  }
 `;
 
 const Logo = styled.a`
