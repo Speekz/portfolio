@@ -60,7 +60,7 @@ export const PROJECTS = [
       }
     ]
   }
-]
+];
 
 export const SKILLS_LIST = [
   {
@@ -80,23 +80,11 @@ export const SKILLS_LIST = [
     highlight: false,
   },
   {
-    name: "AXIOS",
-    highlight: false,
-  },
-  {
     name: "LINUX",
     highlight: false,
   },
   {
-    name: "HTML",
-    highlight: false,
-  },
-  {
     name: "CSS",
-    highlight: false,
-  },
-  {
-    name: "JQUERY",
     highlight: false,
   },
   {
