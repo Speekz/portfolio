@@ -58,10 +58,12 @@ const BackgroundImg = styled.div`
 const MainImage = styled.img`
   transform-origin: 50% 0%;
   opacity:0.2;
+  display: block;
   transform: translate(0px, 0px);
   object-fit: cover;
   width: auto;
   height: 100%;
+  max-width: 100%;
 `;
  
 const HeroSection = styled.div`
@@ -85,7 +87,7 @@ const NoiseEffect = styled.div`
   background-repeat: repeat;
   height: 300%;
   left: -50%;
-  opacity: 0.05;
+  opacity: 0.03;
   position: fixed;
   top: -100%;
   width: 300%;
