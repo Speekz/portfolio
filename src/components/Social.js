@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Social = () => {
   return (
-    <SocialBox id="social">
+    <SocialBox id="socials">
       <SocialTitle>
         <span>
           Socials
