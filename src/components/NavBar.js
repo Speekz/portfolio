@@ -51,9 +51,22 @@ const NavBar = () => {
             </span>
           </MenuLink>
       </Menu>
+      <Copyright menuIsOpen={menuIsOpen}>
+        <span>Copyright © 2021 Johan Bejar. All rights Reserved</span>
+      </Copyright>
     </HeaderBar>
   )
 };
+
+const Copyright = styled.div`
+  font-family: Morton-Book;
+  text-transform: uppercase;
+  display: ${({menuIsOpen}) => (menuIsOpen ? "block" : "none")};
+
+  @media ${DEVICE_MIN.tablet} {
+    display: none;
+  }
+`;
 
 const Hamburger = styled.div`
   display: flex;
