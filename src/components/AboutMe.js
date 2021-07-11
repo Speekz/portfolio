@@ -56,6 +56,7 @@ const QuestionBlock = styled.div`
 `;
 
 const AboutMeQuestion = styled.div`
+  font-family: Morton-Medium;
   font-size: 2em;
 `;
 
