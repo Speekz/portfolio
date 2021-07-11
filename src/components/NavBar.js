@@ -5,22 +5,51 @@ import { DEVICE_MIN, DEVICE_MAX } from "../lib";
 
 const NavBar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const MenuInteraction = () => {
+    setMenuIsOpen(!menuIsOpen);
+  }
+
   return (
-    <HeaderBar>
+    <HeaderBar menuIsOpen={menuIsOpen}>
       <HeaderTitle>
-        <Logo href="/">Johan Bejar</Logo>
+        <Logo href="/">
+          <span>
+            Johan Bejar
+          </span>
+        </Logo>
       </HeaderTitle>
-      <Hamburger onClick={() => { setMenuIsOpen(!menuIsOpen) }}>
+      <Hamburger onClick={MenuInteraction}>
         <span />
         <span />
         <span />
       </Hamburger>
       <Menu menuIsOpen={menuIsOpen}>
-          <MenuLink href="#about-me">ABOUT ME</MenuLink>
-          <MenuLink href="#projects">PROJECTS</MenuLink>
-          <MenuLink href="#skills">SKILLS</MenuLink>
-          <MenuLink href="#contact">CONTACT</MenuLink>
-          <MenuLink href="#socials">SOCIALS</MenuLink>
+          <MenuLink href="#about-me" onClick={MenuInteraction}>
+            <span>
+              About me
+            </span>
+          </MenuLink>
+          <MenuLink href="#projects" onClick={MenuInteraction}>
+            <span>
+              Projects
+            </span>
+          </MenuLink>
+          <MenuLink href="#skills" onClick={MenuInteraction}>
+            <span>
+              Skills
+            </span>
+          </MenuLink>
+          <MenuLink href="#contact" onClick={MenuInteraction}>
+            <span>
+              Contact
+            </span>
+          </MenuLink>
+          <MenuLink href="#socials" onClick={MenuInteraction}>
+            <span>
+              Socials
+            </span>
+          </MenuLink>
       </Menu>
     </HeaderBar>
   )
@@ -30,6 +59,8 @@ const Hamburger = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  padding: 3vh 0 0 0;
+  align-self: flex-start;
 
   span {
     height: 2px;
@@ -49,27 +80,27 @@ const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  align-self: flex-start;
   
   @media ${DEVICE_MAX.tablet} {
     overflow: hidden;
     flex-direction: column;
     width: 100%;
-    max-height: ${({ menuIsOpen }) => ( menuIsOpen ? "300px" : "0")};
+    max-height: ${({ menuIsOpen }) => ( menuIsOpen ? "100%" : "0")};
     transition: max-height 0.2s ease-in;
   }
 `;
 
 const MenuLink = styled.a`
+  font-family: Morton-ExtraBold;
+  font-size: 3em;
   padding: 1rem 0.5rem;
   cursor: pointer;
-  text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in;
   color: #FFFFFF;
-
-  &:hover {
-    color: #FFFFFF;
-  }
+  align-self: flex-start;
+  text-transform: uppercase;
 `;
 
 const Logo = styled.a`
@@ -80,7 +111,8 @@ const Logo = styled.a`
 
 const HeaderTitle = styled.h1`
   font-size: 1em;
-  padding: 1rem 0;
+  padding: 1.5vh 0 0 0;
+  align-self: flex-start;
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
@@ -88,7 +120,7 @@ const HeaderTitle = styled.h1`
 `;
 
 const HeaderBar = styled.header`
-  background-color: transparent;
+  background-color: ${({menuIsOpen}) => (menuIsOpen ? "#34AA8D" : "transparent")};
   display: flex;
   font-size: 1em;
   padding: 0 2rem;
@@ -97,8 +129,9 @@ const HeaderBar = styled.header`
   flex-wrap: wrap;
   z-index: 10;
   position: fixed;
-  mix-blend-mode: difference;
+  mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
   width: 80%;
+  height: 100vh;
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
