@@ -8,6 +8,14 @@ export const PROJECTS = [
       alt: 'No Gorditos / TCO'
     },
     description: 'Telemonitoring mobile application for pediatric obesity checks',
+    minDetails: [
+      'UI/UX Design',
+      'Monitoring automatization',
+      'Database Design',
+      'Architecture Design',
+      'Health Report Delivery',
+      'Firebase Deployment'
+    ],
     details: [
       `Supported both remote monitoring automatically through rules and manually via a specialist to registered
       patients with an Android Application, reducing child onboarding time to the program by 83% from 2 hours to
@@ -27,6 +35,14 @@ export const PROJECTS = [
       alt: 'RUNashville'
     },
     description: 'Social Media and Events Platform for Runners',
+    minDetails: [
+      'High-scalable REST API',
+      'MyERN Stack',
+      'Authentication',
+      'Database Design',
+      'Architecture Design',
+      'CI/CD Setup'
+    ],
     details: [
       `Modeled highly-scalable API services on NodeJS connecting the RUNashville website to events platforms,
       reducing time to launch an event to 15 minutes from 45 minutes average.`,

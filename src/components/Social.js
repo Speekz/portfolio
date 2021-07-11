@@ -5,21 +5,22 @@ const Social = () => {
     <SocialBox id="social">
       <SocialTitle>
         <span>
-          SOCIALS
+          Socials
         </span>
       </SocialTitle>
+      <Line />
       <div>
         <div>
           <SocialLink href="https://www.linkedin.com/in/johan-bejar/" target="_blank" rel="noopener noreferrer">
             <span>
-              LINKEDIN
+              linkedin
             </span>
           </SocialLink>
         </div>
         <div>
           <SocialLink href="https://github.com/Speekz" target="_blank" rel="noopener noreferrer">
             <span>
-              GITHUB
+              github
             </span>
           </SocialLink>
         </div>
@@ -27,6 +28,13 @@ const Social = () => {
     </SocialBox>
   )
 };
+
+const Line = styled.hr`
+  transform-origin 0% 0%;
+  transform: translate(0px, 0px);
+  margin: 0;
+  margin-bottom: 1em;
+`;
 
 const SocialBox = styled.div`
   display: flex;
@@ -36,6 +44,8 @@ const SocialBox = styled.div`
 const SocialTitle = styled.h2`
   margin: 0;
   padding: 0;
+  padding-bottom: 0.2em;
+  text-transform: uppercase;
   span {
     font-family: Morton-Light;
     font-size: 0.7em;
@@ -45,6 +55,7 @@ const SocialTitle = styled.h2`
 
 const SocialLink = styled.a`
   text-decoration: none;
+  text-transform: uppercase;
   color: white;
   font-size: 3.5em;
   font-family: Morton-Black;

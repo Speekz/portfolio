@@ -5,7 +5,12 @@ import { SKILL_RANDOM, DEVICE_MAX } from "../lib"
 const Skills = () => {
   return (
     <SkillSectionBox id="skills">
-      <h2>Skills</h2>
+      <SectionTitle>
+        <span>
+          Skills
+        </span>
+      </SectionTitle>
+      <Line />
       <SkillBox> 
         {SKILL_RANDOM.map((skill, index) => (
           <SkillText key={index} index={index} highlight={skill.highlight}>
@@ -23,6 +28,25 @@ const Skills = () => {
     </SkillSectionBox>
   )
 };
+
+const Line = styled.hr`
+  transform-origin 0% 0%;
+  transform: translate(0px, 0px);
+  margin: 0;
+  margin-bottom: 1em;
+`;
+
+const SectionTitle = styled.h2`
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.2em;
+  text-transform: uppercase;
+  span {
+    font-family: Morton-Light;
+    font-size: 0.7em;
+    opacity: 0.5;
+  }
+`;
 
 const SkillSectionBox = styled.div`
   display: flex;
