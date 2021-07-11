@@ -85,8 +85,9 @@ const SectionTitle = styled.h2`
 
 const ProjectTitle = styled.h3`
   font-size: 2.5em;
-  margin: 0.3em 0 0.1em;
+  margin: 0.3em 0 0 0;
   font-family: Morton-bold
+  
 `;
 
 const ProjectBox = styled.div`
@@ -135,8 +136,7 @@ const ProjectDescription = styled.p`
 const ProjectImage = styled.img`
   width: 100%;
   height: 100%;
-  max-height: 300px;
-  max-width: 160px;
+  object-fit: contain;
 `;
 
 const ProjectDetailsList = styled.ul`
