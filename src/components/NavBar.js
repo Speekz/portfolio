@@ -144,7 +144,7 @@ const HeaderBar = styled.header`
   position: fixed;
   mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
   width: 80%;
-  height: 100vh;
+  height: ${({menuIsOpen}) => (menuIsOpen ? "100vh" : "5vh")};
   transition: background-color 0.2s ease-in;
 
   @media ${DEVICE_MIN.laptop} {
