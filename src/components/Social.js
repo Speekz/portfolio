@@ -34,6 +34,7 @@ const Line = styled.hr`
   transform: translate(0px, 0px);
   margin: 0;
   margin-bottom: 1em;
+  margin-right: 1em;
 `;
 
 const SocialBox = styled.div`
