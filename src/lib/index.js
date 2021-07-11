@@ -60,7 +60,7 @@ export const PROJECTS = [
       }
     ]
   }
-]
+];
 
 export const SKILLS_LIST = [
   {
