@@ -100,7 +100,7 @@ const Menu = styled.div`
     flex-direction: column;
     width: 100%;
     max-height: ${({ menuIsOpen }) => ( menuIsOpen ? "100%" : "0")};
-    transition: max-height 0.2s ease-in;
+    transition: max-height 0.1s ease-in;
   }
 `;
 
@@ -145,6 +145,7 @@ const HeaderBar = styled.header`
   mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
   width: 80%;
   height: 100vh;
+  transition: background-color 0.2s ease-in;
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
