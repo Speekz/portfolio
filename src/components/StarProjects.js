@@ -38,8 +38,8 @@ const StarProjects = () => {
                   </ProjectDetails>
                 ))}
               </ProjectDetailsList>
-              {project.links.map((links) => (
-                <ProjectLinks href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
+              {project.links.map((links, index) => (
+                <ProjectLinks key={index} href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
               ))}
             </div>
           </ProjectBox>
