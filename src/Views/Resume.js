@@ -73,8 +73,9 @@ const HeroSection = styled.div`
 `;
 
 const Content = styled.div`
-  width: 100%;
+  width: 97%;
   height: auto;
+  margin-left: 2%;
   font-family: Morton-Regular;
 `;
 
