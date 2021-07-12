@@ -114,6 +114,10 @@ const MenuLink = styled.a`
   color: #FFFFFF;
   align-self: flex-start;
   text-transform: uppercase;
+
+  @media ${DEVICE_MIN.laptop} {
+    font-size: 1em;
+  };
 `;
 
 const Logo = styled.a`
@@ -153,6 +157,8 @@ const HeaderBar = styled.header`
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
+    background-color: transparent;
+    height: 5vh;
   };
 `;
 

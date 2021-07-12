@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar';
+import HeroSection from '../components/HeroSection';
 import AboutMe from '../components/AboutMe';
 import StarProjects from '../components/StarProjects';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Social from '../components/Social';
 
-import { DEVICE_MIN, DEVICE_MAX } from '../lib';
+import { DEVICE_MAX, DEVICE_MIN } from '../lib';
 
 const Resume = () => {
   return (
@@ -19,15 +20,7 @@ const Resume = () => {
         <MainImage src="/images/banner_background.jpg" alt="ESGPLAY Background"/>
       </BackgroundImg>
       <Content>
-        <HeroSection>
-          <div>
-            <a href="#about-me">ABOUT ME</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#contact">CONTACT</a>
-            <a href="#socials">SOCIALS</a>
-          </div>
-        </HeroSection>
+        <HeroSection />
         <AboutMe />
         <StarProjects />
         <Skills />
@@ -52,7 +45,11 @@ const BackgroundImg = styled.div`
     width: 75vm;
     height: 100vh;
     overflow: hidden;
-  }
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
 `;
 
 const MainImage = styled.img`
@@ -65,20 +62,18 @@ const MainImage = styled.img`
   height: 100%;
   max-width: 100%;
 `;
- 
-const HeroSection = styled.div`
-  display: none;
-
-  @media ${DEVICE_MIN.laptop} {
-    display: block;
-  }
-`;
 
 const Content = styled.div`
   width: 97%;
   height: auto;
   margin-left: 2%;
   font-family: Morton-Regular;
+
+  @media ${DEVICE_MIN.laptop} {
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    // transform: translate3d(-1px, 0px, 0px);
+  };
 `;
 
 const NoiseEffect = styled.div`

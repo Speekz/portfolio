@@ -97,7 +97,7 @@ const AboutMeBlock = styled.div`
 `;
 
 const ProfilePic = styled.img`
-  width: 100%;
+  width: 30%;
   heigth: 100%;
   object-fit: cover;
   display: none;
