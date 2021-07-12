@@ -9,7 +9,7 @@ import {
 
 const Skills = () => {
   return (
-    <SkillSectionBox id="skills">
+    <SectionBox id="skills">
       <SectionTitle>
         <span>
           {SECTION_TITLES.SKILLS}
@@ -30,7 +30,7 @@ const Skills = () => {
           </span>
         </Resume>
       </div>
-    </SkillSectionBox>
+    </SectionBox>
   )
 };
 
@@ -54,13 +54,23 @@ const SectionTitle = styled.h2`
   };
 `;
 
-const SkillSectionBox = styled.div`
+const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${DEVICE_MIN.laptop} {
+    flex-direction: row;
+  };
 `;
 
 const SkillBox = styled.div`
   padding-bottom: 5%;
+
+  @media ${DEVICE_MIN.laptop} {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+  };
 `;
 
 const SkillText = styled.div`
@@ -80,6 +90,11 @@ const SkillText = styled.div`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 5em;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    //font-size: 9em;
+    white-space: nowrap;
   };
 `;
 
