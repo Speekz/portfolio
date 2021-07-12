@@ -1,21 +1,22 @@
 import styled from "styled-components";
-import { DEVICE_MIN } from "../lib";
+
+import { SECTION_TITLES, GENERAL_INFO, DEVICE_MIN } from "../lib";
 
 const Contact = () => {
   return (
-    <ContactBox id="contact">
+    <SectionBox id="contact">
       <ContactTitle>
         <span>
-          Contact me
+          {SECTION_TITLES.CONTACT}
         </span>
       </ContactTitle>
       <Line/>
-      <EmailText href="mailto:johanbejarc@gmail.com">
+      <EmailText href={`mailto:${GENERAL_INFO.email}`}>
         <span>
-          johanbejarc@gmail.com
+          {GENERAL_INFO.email}
         </span>
       </EmailText>
-    </ContactBox>
+    </SectionBox>
   )
 };
 
@@ -27,10 +28,14 @@ const Line = styled.hr`
   margin-right: 1em;
 `;
 
-const ContactBox = styled.div`
+const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10% 0;
+
+  @media ${DEVICE_MIN.laptop} {
+    margin: 0;
+  };
 `;
 
 const ContactTitle = styled.h2`

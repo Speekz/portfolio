@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-import { SKILL_RANDOM, DEVICE_MIN } from "../lib"
+import { 
+  SECTION_TITLES, 
+  GENERAL_INFO, 
+  SKILL_RANDOM, 
+  DEVICE_MIN 
+} from "../lib"
 
 const Skills = () => {
   return (
     <SkillSectionBox id="skills">
       <SectionTitle>
         <span>
-          Skills
+          {SECTION_TITLES.SKILLS}
         </span>
       </SectionTitle>
       <Line />
@@ -19,9 +24,9 @@ const Skills = () => {
         ))}
       </SkillBox>
       <div>
-        <Resume href="/resume/johan_bejar_resume.pdf" target="_blank" rel="noopener noreferrer">
+        <Resume href={`/resume/${GENERAL_INFO.resume.reference}`}target="_blank" rel="noopener noreferrer">
           <span>
-            {`> Resume here`}
+            {GENERAL_INFO.resume.title}
           </span>
         </Resume>
       </div>

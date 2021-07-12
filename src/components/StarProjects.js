@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-import { DEVICE_MAX, DEVICE_MIN, PROJECTS, MORE_PROJECTS } from "../lib";
+import { 
+  SECTION_TITLES, 
+  DEVICE_MAX, DEVICE_MIN,
+  PROJECTS, 
+  MORE_PROJECTS 
+} from "../lib";
 
 const StarProjects = () => {
   return (
     <SectionBox id="projects">
       <SectionTitle>
         <span>
-          Projects
+          {SECTION_TITLES.STAR_PROJECTS}
         </span>
       </SectionTitle>
       <Line />
@@ -112,6 +117,10 @@ const ProjectTitle = styled.h3`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 4.5em;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    white-space: nowrap;
   };
 `;
 

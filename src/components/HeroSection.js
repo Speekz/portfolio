@@ -1,34 +1,17 @@
 import styled from "styled-components";
-import { DEVICE_MIN } from "../lib";
+
+import { MENU, DEVICE_MIN } from "../lib";
 
 const HeroSection = () => {
   return (
     <HeroBox>
-      <MenuLink href="#about-me">
-        <span>
-          ABOUT ME
-        </span>
-      </MenuLink>
-      <MenuLink href="#projects">
-        <span>
-          PROJECTS
-        </span>
-      </MenuLink>
-      <MenuLink href="#skills">
-        <span>
-          SKILLS
-        </span>
-      </MenuLink>
-      <MenuLink href="#contact">
-        <span>
-          CONTACT
-        </span>
-      </MenuLink>
-      <MenuLink href="#socials">
-        <span>
-          SOCIALS
-        </span>
-      </MenuLink>
+      {MENU.map((item, index) => (
+        <MenuLink key={index} href={item.reference}>
+          <span>
+            {item.title}
+          </span>
+        </MenuLink>
+      ))}
     </HeroBox>
   );
 };
@@ -60,7 +43,8 @@ const MenuLink = styled.a`
   };
 
   &:hover {
-    color: #34AA8D;
+    color: transparent;
+    -webkit-text-stroke: 1px #34AA8D;
   };
 `;
 

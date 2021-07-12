@@ -1,5 +1,56 @@
 import _ from 'lodash';
 
+export const SECTION_TITLES = {
+  ABOUT_ME: 'About me',
+  STAR_PROJECTS: 'Projects',
+  SKILLS: 'Skills',
+  CONTACT: 'Contact me',
+  SOCIAL: 'Socials'
+};
+
+export const GENERAL_INFO = {
+  name: 'Johan Bejar',
+  resume: {
+    reference: 'johan_bejar_resume.pdf',
+    title: '> Resume here',
+  },
+  email: 'johanbejarc@gmail.com',
+  socials: [
+    {
+      title: 'LinkedIn',
+      reference: 'https://www.linkedin.com/in/johan-bejar/',
+    },
+    {
+      title: 'github', 
+      reference: 'https://github.com/Speekz',
+    },
+  ],
+  copyright: 'Copyright © 2021 Johan Bejar. All rights Reserved',
+};
+
+export const MENU = [
+  {
+    title: 'About me',
+    reference: '#about-me',
+  },
+  {
+    title: 'Projects',
+    reference: '#projects',
+  },
+  {
+    title: 'Skills',
+    reference: '#skills',
+  },
+  {
+    title: 'Contact',
+    reference: '#contact',
+  },
+  {
+    title: 'Socials',
+    reference: '#socials',
+  },
+];
+
 export const ABOUT_ME = {
   title: {
     first: 'Systems and',

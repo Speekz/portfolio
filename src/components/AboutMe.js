@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import { ABOUT_ME, DEVICE_MAX, DEVICE_MIN } from "../lib";
 
 const AboutMe = () => {

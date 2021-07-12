@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { DEVICE_MIN, DEVICE_MAX } from "../lib";
+import { 
+  GENERAL_INFO,
+  MENU, 
+  DEVICE_MIN, 
+  DEVICE_MAX,
+} from "../lib";
 
 const NavBar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -15,7 +20,7 @@ const NavBar = () => {
       <HeaderTitle>
         <Logo href="/">
           <span>
-            Johan Bejar
+            {GENERAL_INFO.name}
           </span>
         </Logo>
       </HeaderTitle>
@@ -25,34 +30,16 @@ const NavBar = () => {
         <span />
       </Hamburger>
       <Menu menuIsOpen={menuIsOpen}>
-          <MenuLink href="#about-me" onClick={MenuInteraction}>
+        {MENU.map((item, index) => (
+          <MenuLink key={index} href={item.reference} onClick={MenuInteraction}>
             <span>
-              About me
+              {item.title}
             </span>
           </MenuLink>
-          <MenuLink href="#projects" onClick={MenuInteraction}>
-            <span>
-              Projects
-            </span>
-          </MenuLink>
-          <MenuLink href="#skills" onClick={MenuInteraction}>
-            <span>
-              Skills
-            </span>
-          </MenuLink>
-          <MenuLink href="#contact" onClick={MenuInteraction}>
-            <span>
-              Contact
-            </span>
-          </MenuLink>
-          <MenuLink href="#socials" onClick={MenuInteraction}>
-            <span>
-              Socials
-            </span>
-          </MenuLink>
+        ))}
       </Menu>
       <Copyright menuIsOpen={menuIsOpen}>
-        <span>Copyright © 2021 Johan Bejar. All rights Reserved</span>
+        <span>{GENERAL_INFO.copyright}</span>
       </Copyright>
     </HeaderBar>
   )
