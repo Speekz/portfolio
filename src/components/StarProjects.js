@@ -110,6 +110,10 @@ const ProjectBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${DEVICE_MIN.laptop} {
+    flex-direction: row;
+  };
 `;
 
 const ImageBox = styled.div`

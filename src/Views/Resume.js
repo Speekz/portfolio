@@ -70,9 +70,8 @@ const Content = styled.div`
   font-family: Morton-Regular;
 
   @media ${DEVICE_MIN.laptop} {
-    // overflow-y: auto;
-    // overflow-x: hidden;
-    // transform: translate3d(-1px, 0px, 0px);
+    display:flex;
+    flex-direction: row;
   };
 `;
 

@@ -40,12 +40,13 @@ const HeroBox = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10vh 0;
+    margin-right: 45vh;
   };
 `;
 
 const MenuLink = styled.a`
   font-family: Morton-ExtraBold;
-  font-size: 9em;
+  font-size: 10.5em;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in;
@@ -53,6 +54,10 @@ const MenuLink = styled.a`
   align-self: flex-start;
   text-transform: uppercase;
   line-height: 1em;
+
+  span {
+    white-space: pre;
+  };
 
   &:hover {
     color: #34AA8D;

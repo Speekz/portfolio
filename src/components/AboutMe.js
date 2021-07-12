@@ -94,6 +94,12 @@ const AboutMeBlock = styled.div`
   position: absolute;
   bottom: 3.125vh;
   left: 0;
+
+  @media ${DEVICE_MIN.laptop} {
+    position: relative;
+    bottom: 0vh;
+    top: 60vh;
+  };
 `;
 
 const ProfilePic = styled.img`
@@ -114,7 +120,7 @@ const HeroSection = styled.div`
 
   @media ${DEVICE_MAX.tablet} {
     padding-top: 50vh;
-  }
+  };
 `;
 
 export default AboutMe;
