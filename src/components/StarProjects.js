@@ -61,6 +61,10 @@ const StarProjects = () => {
 
 const ProjectDetailBox = styled.div`
   width: 100%;
+
+  @media ${DEVICE_MIN.tablet} {
+    width: 60%;
+  };
 `;
 
 const SectionBox = styled.div`
@@ -94,6 +98,10 @@ const ProjectTitle = styled.h3`
   
   @media ${DEVICE_MIN.mobileL} {
     font-size: 3.5em;
+  };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 4.5em;
   };
 `;
 
@@ -132,6 +140,10 @@ const MoreProjectsText = styled.a`
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 3.5em;
+  };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 6em;
   };
 `;
 
