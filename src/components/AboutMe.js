@@ -61,7 +61,7 @@ const AboutMeQuestion = styled.div`
 
   @media ${DEVICE_MIN.mobileM} {
     font-size: 2.5em;
-  }
+  };
 `;
 
 const AboutMeQuestionHighlight = styled.div`
@@ -72,11 +72,11 @@ const AboutMeQuestionHighlight = styled.div`
 
   @media ${DEVICE_MIN.mobileM} {
     font-size: 4em;
-  }
+  };
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 5em;
-  }
+  };
 `;
 
 const AboutMeBlock = styled.div`
@@ -94,7 +94,7 @@ const ProfilePic = styled.img`
   object-fit: cover;
   display: none;
 
-  @media ${DEVICE_MIN.tablet} {
+  @media ${DEVICE_MIN.laptop} {
     display: block;
   }
 `;

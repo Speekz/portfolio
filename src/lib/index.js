@@ -14,7 +14,7 @@ export const ABOUT_ME = {
     source: 'johan_bejar.jpg',
     alt: 'Profile Picture Johan',
   },
-}
+};
 
 export const PROJECTS = [
   {
@@ -76,7 +76,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: 'NO GORDITOS / TCO APP',
+    title: 'TCO APP',
     image: {
       source: 'no_gorditos_tco.png',
       alt: 'No Gorditos / TCO'
@@ -105,6 +105,12 @@ export const PROJECTS = [
     ],
   },
 ];
+
+export const MORE_PROJECTS = {
+  first: 'Want to see',
+  highlight: 'more?',
+  reference: 'projects',
+};
 
 export const SKILLS_LIST = [
   {

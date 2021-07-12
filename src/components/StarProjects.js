@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { DEVICE_MAX, PROJECTS } from "../lib";
+import { DEVICE_MAX, DEVICE_MIN, PROJECTS, MORE_PROJECTS } from "../lib";
 
 const StarProjects = () => {
   return (
@@ -17,7 +17,7 @@ const StarProjects = () => {
             <ImageBox>
               <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} />
             </ImageBox>
-            <div>
+            <ProjectDetailBox>
               <div>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectDescription>{project.description}</ProjectDescription>
@@ -41,23 +41,27 @@ const StarProjects = () => {
               {project.links.map((links, index) => (
                 <ProjectLinks key={index} href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
               ))}
-            </div>
+            </ProjectDetailBox>
           </ProjectBox>
         ))}
       </div>
       <MoreProjectsBox>
         <span>
-          WANT TO SEE 
+          {MORE_PROJECTS.first}
         </span>
-        <MoreProjectsText href="/projects">
+        <MoreProjectsText href={`/${MORE_PROJECTS.reference}`}>
           <span>
-            MORE?
+            {MORE_PROJECTS.highlight}
           </span>
         </MoreProjectsText>
       </MoreProjectsBox>
     </SectionBox>
   )
 };
+
+const ProjectDetailBox = styled.div`
+  width: 100%;
+`;
 
 const SectionBox = styled.div`
   margin-bottom: 2em;
@@ -80,14 +84,17 @@ const SectionTitle = styled.h2`
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-  }
+  };
 `;
 
 const ProjectTitle = styled.h3`
   font-size: 2.5em;
   margin: 0.3em 0 0 0;
-  font-family: Morton-bold
+  font-family: Morton-bold;
   
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 3.5em;
+  };
 `;
 
 const ProjectBox = styled.div`
@@ -106,12 +113,13 @@ const MoreProjectsBox = styled.div`
   margin-top: 6.25vh;
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 
   span {
     font-size: 2em;
     padding-left: 0;
     line-height: 0.9;
-  }
+  };
 `;
 
 const MoreProjectsText = styled.a`
@@ -119,11 +127,12 @@ const MoreProjectsText = styled.a`
   text-decoration: none;
   color: #34AA8D;
   font-family: Morton-Black;
+  font-size: 3em;
+  padding-left: 0;
 
-  @media ${DEVICE_MAX.tablet} {
-    font-size: 3em;
-    padding-left: 0;
-  }
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 3.5em;
+  };
 `;
 
 const ProjectDescription = styled.p`
@@ -147,11 +156,11 @@ const ProjectDetails = styled.li`
   span { 
     position: relative;
     left: -10px;
-  }
+  };
   
   @media ${DEVICE_MAX} {
     display: none;
-  }
+  };
 `;
 
 const ProjectMinDetails = styled.li`
@@ -162,7 +171,7 @@ const ProjectMinDetails = styled.li`
     font-family: Morton-Light;
     letter-spacing: 0.1em;
     font-size: 0.8em;
-  }
+  };
 `;
 
 const ProjectLinks = styled.a`

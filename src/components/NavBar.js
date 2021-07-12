@@ -65,7 +65,7 @@ const Copyright = styled.div`
 
   @media ${DEVICE_MIN.tablet} {
     display: none;
-  }
+  };
 `;
 
 const Hamburger = styled.div`
@@ -81,11 +81,11 @@ const Hamburger = styled.div`
     background: white;
     margin-bottom: 4px;
     border-radius: 5px;
-  }
+  };
 
   @media ${DEVICE_MIN.tablet} {
     display: none;
-  }
+  };
 `;
 
 const Menu = styled.div`
@@ -101,7 +101,7 @@ const Menu = styled.div`
     width: 100%;
     max-height: ${({ menuIsOpen }) => ( menuIsOpen ? "100%" : "0")};
     transition: max-height 0.1s ease-in;
-  }
+  };
 `;
 
 const MenuLink = styled.a`
@@ -129,7 +129,7 @@ const HeaderTitle = styled.h1`
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
-  }
+  };
 `;
 
 const HeaderBar = styled.header`
@@ -149,7 +149,7 @@ const HeaderBar = styled.header`
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
-  }
+  };
 `;
 
 
