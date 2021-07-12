@@ -65,6 +65,10 @@ const SocialLink = styled.a`
   @media ${DEVICE_MIN.mobileL} {
     font-size: 4.5em;
   };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 5.5em;
+  };
 `;
 
 export default Social;

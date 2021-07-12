@@ -53,8 +53,8 @@ const EmailText = styled.a`
   font-family: Morton-Medium;
   font-size: 1.25em;
 
-  @media ${DEVICE_MIN.mobileL} {
-    font-size: 1.5em;
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 2em;
   };
 `;
 

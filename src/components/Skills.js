@@ -21,7 +21,7 @@ const Skills = () => {
       <div>
         <Resume href="/resume/johan_bejar_resume.pdf" target="_blank" rel="noopener noreferrer">
           <span>
-            RESUME HERE
+            {`> Resume here`}
           </span>
         </Resume>
       </div>
@@ -72,11 +72,16 @@ const SkillText = styled.div`
   @media ${DEVICE_MIN.mobileL} {
     font-size: 3.5em;
   };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 5em;
+  };
 `;
 
 const Resume = styled.a`
   position: relative;
   text-decoration: none;
+  text-transform: uppercase;
   color: white;
   font-family: Morton-Thin;
   font-size: 3.5em;
@@ -87,7 +92,11 @@ const Resume = styled.a`
   };
 
   @media ${DEVICE_MIN.mobileL} {
-    font-size: 5em;
+    font-size: 4.5em;
+  };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 7em;
   };
 `;
 

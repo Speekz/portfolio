@@ -62,6 +62,10 @@ const AboutMeQuestion = styled.div`
   @media ${DEVICE_MIN.mobileM} {
     font-size: 2.5em;
   };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 4em;
+  };
 `;
 
 const AboutMeQuestionHighlight = styled.div`
@@ -76,6 +80,10 @@ const AboutMeQuestionHighlight = styled.div`
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 5em;
+  };
+
+  @media ${DEVICE_MIN.tablet} {
+    font-size: 8.5em;
   };
 `;
 

@@ -63,7 +63,7 @@ const Copyright = styled.div`
   text-transform: uppercase;
   display: ${({menuIsOpen}) => (menuIsOpen ? "block" : "none")};
 
-  @media ${DEVICE_MIN.tablet} {
+  @media ${DEVICE_MIN.laptop} {
     display: none;
   };
 `;
@@ -83,7 +83,7 @@ const Hamburger = styled.div`
     border-radius: 5px;
   };
 
-  @media ${DEVICE_MIN.tablet} {
+  @media ${DEVICE_MIN.laptop} {
     display: none;
   };
 `;
@@ -143,9 +143,13 @@ const HeaderBar = styled.header`
   z-index: 10;
   position: fixed;
   mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
-  width: 80%;
+  width: 85%;
   height: ${({menuIsOpen}) => (menuIsOpen ? "100vh" : "5vh")};
   transition: background-color 0.2s ease-in, height 0.3s ease-out;
+
+  @media ${DEVICE_MIN.tablet} {
+    width: 92%;
+  };
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1.2em;
