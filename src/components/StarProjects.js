@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-import { DEVICE_MAX, DEVICE_MIN, PROJECTS, MORE_PROJECTS } from "../lib";
+import { 
+  SECTION_TITLES, 
+  DEVICE_MAX, DEVICE_MIN,
+  PROJECTS, 
+  MORE_PROJECTS 
+} from "../lib";
 
 const StarProjects = () => {
   return (
     <SectionBox id="projects">
       <SectionTitle>
         <span>
-          Projects
+          {SECTION_TITLES.STAR_PROJECTS}
         </span>
       </SectionTitle>
       <Line />
@@ -69,6 +74,11 @@ const ProjectDetailBox = styled.div`
 
 const SectionBox = styled.div`
   margin-bottom: 2em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: flex;
+    flex-direction: row;
+  };
 `;
 
 const Line = styled.hr`
@@ -88,6 +98,11 @@ const SectionTitle = styled.h2`
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
+
+    @media ${DEVICE_MIN.laptop} {
+      transform-origin: center;
+      transform: translate3d(-50.5%,-50%,0), rotate(-90deg);
+    };
   };
 `;
 
@@ -103,6 +118,10 @@ const ProjectTitle = styled.h3`
   @media ${DEVICE_MIN.tablet} {
     font-size: 4.5em;
   };
+
+  @media ${DEVICE_MIN.laptop} {
+    white-space: nowrap;
+  };
 `;
 
 const ProjectBox = styled.div`
@@ -110,6 +129,10 @@ const ProjectBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${DEVICE_MIN.laptop} {
+    flex-direction: row;
+  };
 `;
 
 const ImageBox = styled.div`

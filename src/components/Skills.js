@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-import { SKILL_RANDOM, DEVICE_MIN } from "../lib"
+import { 
+  SECTION_TITLES, 
+  GENERAL_INFO, 
+  SKILL_RANDOM, 
+  DEVICE_MIN 
+} from "../lib"
 
 const Skills = () => {
   return (
-    <SkillSectionBox id="skills">
+    <SectionBox id="skills">
       <SectionTitle>
         <span>
-          Skills
+          {SECTION_TITLES.SKILLS}
         </span>
       </SectionTitle>
       <Line />
@@ -19,13 +24,13 @@ const Skills = () => {
         ))}
       </SkillBox>
       <div>
-        <Resume href="/resume/johan_bejar_resume.pdf" target="_blank" rel="noopener noreferrer">
+        <Resume href={`/resume/${GENERAL_INFO.resume.reference}`}target="_blank" rel="noopener noreferrer">
           <span>
-            {`> Resume here`}
+            {GENERAL_INFO.resume.title}
           </span>
         </Resume>
       </div>
-    </SkillSectionBox>
+    </SectionBox>
   )
 };
 
@@ -49,13 +54,23 @@ const SectionTitle = styled.h2`
   };
 `;
 
-const SkillSectionBox = styled.div`
+const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${DEVICE_MIN.laptop} {
+    flex-direction: row;
+  };
 `;
 
 const SkillBox = styled.div`
   padding-bottom: 5%;
+
+  @media ${DEVICE_MIN.laptop} {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+  };
 `;
 
 const SkillText = styled.div`
@@ -75,6 +90,11 @@ const SkillText = styled.div`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 5em;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    //font-size: 9em;
+    white-space: nowrap;
   };
 `;
 

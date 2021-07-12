@@ -1,29 +1,26 @@
 import styled from "styled-components";
-import { DEVICE_MIN } from "../lib";
+import { SECTION_TITLES, GENERAL_INFO, DEVICE_MIN } from "../lib";
 
 const Social = () => {
   return (
     <SocialBox id="socials">
       <SocialTitle>
         <span>
-          Socials
+          {SECTION_TITLES.SOCIAL}
         </span>
       </SocialTitle>
       <Line />
       <div>
         <div>
-          <SocialLink href="https://www.linkedin.com/in/johan-bejar/" target="_blank" rel="noopener noreferrer">
-            <span>
-              linkedin
-            </span>
-          </SocialLink>
-        </div>
-        <div>
-          <SocialLink href="https://github.com/Speekz" target="_blank" rel="noopener noreferrer">
-            <span>
-              github
-            </span>
-          </SocialLink>
+          {GENERAL_INFO.socials.map((social, index) => (
+            <div>
+              <SocialLink key={index} href={social.reference} target="_blank" rel="noopener noreferrer">
+                <span>
+                  {social.title}
+                </span>
+              </SocialLink>
+            </div>
+          ))}
         </div>
       </div>
     </SocialBox>
