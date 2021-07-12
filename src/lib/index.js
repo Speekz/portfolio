@@ -2,31 +2,30 @@ import _ from 'lodash';
 
 export const PROJECTS = [
   {
-    title: 'NO GORDITOS / TCO APP',
+    title: 'ESGPLAY',
     image: {
-      source: 'no_gorditos_tco.png',
-      alt: 'No Gorditos / TCO'
+      source: 'esgplay.png',
+      alt: 'ESGPLAY'
     },
-    description: 'Telemonitoring mobile application for pediatric obesity checks',
+    description: 'Multipurpose Esports Competitive Platform',
     minDetails: [
-      'UI/UX Design',
-      'Monitoring automatization',
       'Database Design',
-      'Architecture Design',
-      'Health Report Delivery',
-      'Firebase Deployment'
+      'Steam Integration',
+      'Biometrics and id verification',
+      'Full-Stack development',
+      'Founder Member'
     ],
     details: [
-      `Supported both remote monitoring automatically through rules and manually via a specialist to registered
-      patients with an Android Application, reducing child onboarding time to the program by 83% from 2 hours to
-      10 minutes.`,
-      `Delivered health reports about patients considering factors like prescriptions and caregiver participation on a
-      predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.`
+      `Founded the first esports platform for online gamers to play, connecting over 18k users across Latin America`,
+      `Configured and hosted full fledged servers to facilitate 3000+ CS:GO games each month.`,
+      `Designed system architecture on AWS with Firebase and PostgreSQL serving 6000+ users per month.`
     ],
-    links: [{
-      title: 'Springer article about TCO' ,
-      link: 'https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6'
-    }]
+    links: [
+      {
+        title: 'ESGPLAY.net',
+        link: 'https://esgplay.net/'
+      },
+    ],
   },
   {
     title: 'RUNASHVILLE',
@@ -58,8 +57,37 @@ export const PROJECTS = [
         title: 'RUNashville Backend' ,
         link: 'https://github.com/Speekz/RUNashville-backend'
       }
-    ]
-  }
+    ],
+  },
+  {
+    title: 'NO GORDITOS / TCO APP',
+    image: {
+      source: 'no_gorditos_tco.png',
+      alt: 'No Gorditos / TCO'
+    },
+    description: 'Telemonitoring mobile application for pediatric obesity checks',
+    minDetails: [
+      'UI/UX Design',
+      'Monitoring automatization',
+      'Database Design',
+      'Architecture Design',
+      'Health Report Delivery',
+      'Firebase Deployment'
+    ],
+    details: [
+      `Supported both remote monitoring automatically through rules and manually via a specialist to registered
+      patients with an Android Application, reducing child onboarding time to the program by 83% from 2 hours to
+      10 minutes.`,
+      `Delivered health reports about patients considering factors like prescriptions and caregiver participation on a
+      predetermined obesity plan in real time with Firebase, reducing dropouts in 38%.`
+    ],
+    links: [
+      {
+      title: 'Springer article about TCO' ,
+      link: 'https://link.springer.com/chapter/10.1007%2F978-981-33-4565-2_6'
+      }
+    ],
+  },
 ];
 
 export const SKILLS_LIST = [
