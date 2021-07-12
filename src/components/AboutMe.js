@@ -3,7 +3,7 @@ import { ABOUT_ME, DEVICE_MAX, DEVICE_MIN } from "../lib";
 
 const AboutMe = () => {
   return (
-    <HeroSection id="about-me">
+    <SectionBlock id="about-me">
       <AboutMeBlock>
         <QuestionBlock>
           <AboutMeQuestion>
@@ -25,10 +25,10 @@ const AboutMe = () => {
           </AboutMeAnswer>
         </AnswerBlock>
       </AboutMeBlock>
-      <div className="image-about-me">
+      <PictureBlock>
         <ProfilePic src={`/images/${ABOUT_ME.profilePic.source}`} alt={ABOUT_ME.profilePic.alt} />
-      </div>
-    </HeroSection>
+      </PictureBlock>
+    </SectionBlock>
   )
 }
 
@@ -99,27 +99,41 @@ const AboutMeBlock = styled.div`
     position: relative;
     bottom: 0vh;
     top: 60vh;
+    padding: 0;
+  };
+`;
+
+const PictureBlock = styled.div`
+  display: none;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: block;
+    //position: relative;
+    width: 100%;
+    height: 100%;
   };
 `;
 
 const ProfilePic = styled.img`
   width: 30%;
-  heigth: 100%;
+  height: 100%;
   object-fit: cover;
-  display: none;
-
-  @media ${DEVICE_MIN.laptop} {
-    display: block;
-  }
 `;
 
-const HeroSection = styled.div`
+const SectionBlock = styled.div`
   height: 50vh;
   position: relative;
   padding 0;
 
-  @media ${DEVICE_MAX.tablet} {
+  @media ${DEVICE_MAX.laptop} {
     padding-top: 50vh;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    flex: 1 1 0;
   };
 `;
 

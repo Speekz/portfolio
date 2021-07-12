@@ -95,7 +95,7 @@ const Menu = styled.div`
   position: relative;
   align-self: flex-start;
   
-  @media ${DEVICE_MAX.tablet} {
+  @media ${DEVICE_MAX.laptop} {
     overflow: hidden;
     flex-direction: column;
     width: 100%;

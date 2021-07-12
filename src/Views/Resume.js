@@ -41,7 +41,7 @@ const BackgroundImg = styled.div`
   width: 100%;
   height: auto;
 
-  @media ${DEVICE_MAX.tablet} {
+  @media ${DEVICE_MAX.laptop} {
     width: 75vm;
     height: 100vh;
     overflow: hidden;
@@ -70,8 +70,11 @@ const Content = styled.div`
   font-family: Morton-Regular;
 
   @media ${DEVICE_MIN.laptop} {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    width: auto;
+    align-items: stretch;
+    flex: 1 1 0;
   };
 `;
 

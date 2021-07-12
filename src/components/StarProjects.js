@@ -69,6 +69,11 @@ const ProjectDetailBox = styled.div`
 
 const SectionBox = styled.div`
   margin-bottom: 2em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: flex;
+    flex-direction: row;
+  };
 `;
 
 const Line = styled.hr`
@@ -88,6 +93,11 @@ const SectionTitle = styled.h2`
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
+
+    @media ${DEVICE_MIN.laptop} {
+      transform-origin: center;
+      transform: translate3d(-50.5%,-50%,0), rotate(-90deg);
+    };
   };
 `;
 

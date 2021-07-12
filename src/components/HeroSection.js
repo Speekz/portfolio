@@ -40,7 +40,7 @@ const HeroBox = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10vh 0;
-    margin-right: 45vh;
+    margin-right: 40vh;
   };
 `;
 
