@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_MIN } from "../lib";
 
 const Social = () => {
   return (
@@ -51,7 +52,7 @@ const SocialTitle = styled.h2`
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-  }
+  };
 `;
 
 const SocialLink = styled.a`
@@ -60,6 +61,10 @@ const SocialLink = styled.a`
   color: white;
   font-size: 3.5em;
   font-family: Morton-Black;
+
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 4.5em;
+  };
 `;
 
 export default Social;

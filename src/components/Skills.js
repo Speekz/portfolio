@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { SKILL_RANDOM, DEVICE_MAX } from "../lib"
+import { SKILL_RANDOM, DEVICE_MIN } from "../lib"
 
 const Skills = () => {
   return (
@@ -46,7 +46,7 @@ const SectionTitle = styled.h2`
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-  }
+  };
 `;
 
 const SkillSectionBox = styled.div`
@@ -68,6 +68,10 @@ const SkillText = styled.div`
      color: transparent;` 
     :
     "")}
+  
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 3.5em;
+  };
 `;
 
 const Resume = styled.a`
@@ -75,11 +79,16 @@ const Resume = styled.a`
   text-decoration: none;
   color: white;
   font-family: Morton-Thin;
+  font-size: 3.5em;
+  padding-left: 0;
 
-  @media ${DEVICE_MAX.tablet} {
-    font-size: 3em;
-    padding-left: 0;
-  }
+  @media ${DEVICE_MIN.mobileM} {
+    font-size: 4em;
+  };
+
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 5em;
+  };
 `;
 
 export default Skills;

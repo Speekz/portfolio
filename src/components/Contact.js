@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_MIN } from "../lib";
 
 const Contact = () => {
   return (
@@ -37,11 +38,12 @@ const ContactTitle = styled.h2`
   padding: 0;
   padding-bottom: 0.2em;
   text-transform: uppercase;
+  
   span {
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-  }
+  };
 `;
 
 const EmailText = styled.a`
@@ -50,6 +52,10 @@ const EmailText = styled.a`
   color: white;
   font-family: Morton-Medium;
   font-size: 1.25em;
+
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 1.5em;
+  };
 `;
 
 export default Contact;
