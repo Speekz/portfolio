@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { DEVICE_MAX, DEVICE_MIN } from "../lib";
+import { ABOUT_ME, DEVICE_MAX, DEVICE_MIN } from "../lib";
 
 const AboutMe = () => {
   return (
@@ -7,26 +7,26 @@ const AboutMe = () => {
       <AboutMeBlock>
         <QuestionBlock>
           <AboutMeQuestion>
-            Systems and
+            {ABOUT_ME.title.first}
           </AboutMeQuestion>
           <AboutMeQuestionHighlight>
-            Software
+            {ABOUT_ME.title.highlight}
           </AboutMeQuestionHighlight>
           <AboutMeQuestion>
-            Engineer
+            {ABOUT_ME.title.second}
           </AboutMeQuestion>
         </QuestionBlock>
         <AnswerBlock>
           <AboutMeAnswer>
-            {`I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a system engineer allows me to `}
+            {ABOUT_ME.description.regular}
             <HighlightAnswer>
-               understand, design, and develop large-scale web applications.
+              {ABOUT_ME.description.highlight}   
             </HighlightAnswer>
           </AboutMeAnswer>
         </AnswerBlock>
       </AboutMeBlock>
       <div className="image-about-me">
-        <ProfilePic src="/images/johan_bejar.jpg" alt="Johan Bejar profile" />
+        <ProfilePic src={`/images/${ABOUT_ME.profilePic.source}`} alt={ABOUT_ME.profilePic.alt} />
       </div>
     </HeroSection>
   )
@@ -58,6 +58,10 @@ const QuestionBlock = styled.div`
 const AboutMeQuestion = styled.div`
   font-family: Morton-Medium;
   font-size: 2em;
+
+  @media ${DEVICE_MIN.mobileM} {
+    font-size: 2.5em;
+  }
 `;
 
 const AboutMeQuestionHighlight = styled.div`
@@ -65,6 +69,14 @@ const AboutMeQuestionHighlight = styled.div`
   margin-left: auto;
   font-size: 3.5em;
   color: #34AA8D;
+
+  @media ${DEVICE_MIN.mobileM} {
+    font-size: 4em;
+  }
+
+  @media ${DEVICE_MIN.mobileL} {
+    font-size: 5em;
+  }
 `;
 
 const AboutMeBlock = styled.div`

@@ -1,5 +1,21 @@
 import _ from 'lodash';
 
+export const ABOUT_ME = {
+  title: {
+    first: 'Systems and',
+    highlight: 'Software',
+    second: 'Engineer',
+  },
+  description: {
+    regular: `I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a system engineer allows me to `,
+    highlight: 'understand, design, and develop large-scale web applications.',
+  },
+  profilePic: {
+    source: 'johan_bejar.jpg',
+    alt: 'Profile Picture Johan',
+  },
+}
+
 export const PROJECTS = [
   {
     title: 'ESGPLAY',
