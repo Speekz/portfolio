@@ -33,6 +33,10 @@ const Line = styled.hr`
   margin: 0;
   margin-bottom: 1em;
   margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
 `;
 
 const SocialBox = styled.div`

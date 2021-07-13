@@ -40,6 +40,10 @@ const Line = styled.hr`
   margin: 0;
   margin-bottom: 1em;
   margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
 `;
 
 const SectionTitle = styled.h2`
@@ -47,10 +51,16 @@ const SectionTitle = styled.h2`
   padding: 0;
   padding-bottom: 0.2em;
   text-transform: uppercase;
+
   span {
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 50%;
   };
 `;
 
@@ -72,6 +82,8 @@ const SkillBox = styled.div`
     display: flex;
     flex-wrap: wrap;
     line-height: 0.5;
+    margin-left: 45px;
+    border-left: 1px solid #aaa;
   };
 `;
 

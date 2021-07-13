@@ -11,11 +11,16 @@ const Contact = () => {
         </span>
       </ContactTitle>
       <Line/>
-      <EmailText href={`mailto:${GENERAL_INFO.email}`}>
-        <span>
-          {GENERAL_INFO.email}
-        </span>
-      </EmailText>
+      <EmailBox>
+        <EmailInvitation>
+          {GENERAL_INFO.email.text}
+        </EmailInvitation>
+        <EmailText href={`mailto:${GENERAL_INFO.email.ref}`}>
+          <span>
+            {GENERAL_INFO.email.ref}
+          </span>
+        </EmailText>
+      </EmailBox>
     </SectionBox>
   )
 };
@@ -26,6 +31,10 @@ const Line = styled.hr`
   margin: 0;
   margin-bottom: 1em;
   margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
 `;
 
 const SectionBox = styled.div`
@@ -35,7 +44,9 @@ const SectionBox = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     margin: 0;
-    background-color: pink;
+    height: 100vh;
+    width: 600px;
+    //background-color: pink;
   };
 `;
 
@@ -50,6 +61,24 @@ const ContactTitle = styled.h2`
     font-size: 0.7em;
     opacity: 0.5;
   };
+
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 50%;
+    white-space: nowrap;
+  };
+`;
+
+const EmailBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    display: inline-flex;
+    flex-direction: column;
+    border-left: 1px solid #aaa;
+    margin-left: 80px;
+    height: 100vh;
+    align-items: center;
+    width: 400px;
+  };
 `;
 
 const EmailText = styled.a`
@@ -61,6 +90,25 @@ const EmailText = styled.a`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 2em;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+  };
+`;
+
+const EmailInvitation = styled.span`
+  display: none;
+
+  @media ${DEVICE_MIN.laptop} {
+    font-family: Morton-Thin;
+    font-size: 3em;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    top: 45%;
   };
 `;
 

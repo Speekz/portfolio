@@ -114,7 +114,7 @@ const SectionBlock = styled.div`
     height: 100vh;
     width: 1000px;
     display: flex;
-    background-color: yellow;
+    //background-color: yellow;
   };
 `;
 

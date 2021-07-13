@@ -14,7 +14,10 @@ export const GENERAL_INFO = {
     reference: 'johan_bejar_resume.pdf',
     title: '> Resume here',
   },
-  email: 'johanbejarc@gmail.com',
+  email: {
+    text: 'Feel free to hit me up at ',
+    ref: 'johanbejarc@gmail.com',
+  },
   socials: [
     {
       title: 'LinkedIn',
