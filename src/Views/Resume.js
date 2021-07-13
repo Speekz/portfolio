@@ -29,7 +29,7 @@ const Resume = () => {
       </Content>
     </React.Fragment>
   );
-}
+};
 
 const BackgroundImg = styled.div`
   transform: translateY(0px);

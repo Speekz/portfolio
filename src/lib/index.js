@@ -162,7 +162,61 @@ export const PROJECTS = [
       }
     ],
   },
+  {
+    title: 'HENDRIX',
+    image: {
+      source: 'hendix.png',
+      alt: 'Hendrix Backend'
+    },
+    description: 'Retail Ecommerce product detail',
+    minDetails: [
+      'Microservices Architecture',
+      'Load Balancing',
+      'Data Import',
+      'MERN Stack',
+    ],
+    details: [
+      `Re-engineered NodeJS backend with microservices architecture and load balancing up to 2000 RPS, a 1000%
+      improvement.`,
+      `Fine-Tuned MongoDB for faster read/write operations using legacy database schemas, achieving 5-15ms
+      response times.`
+    ],
+    links: [
+      {
+      title: 'Hendrix Backend Service' ,
+      link: 'https://github.com/SDC3-HENDRIX/SDC-Reviews'
+      }
+    ],
+  },
+  {
+    title: 'TATOOINE',
+    image: {
+      source: 'tatooine.png',
+      alt: 'Tatooine frontend'
+    },
+    description: 'Ecommerce fashion website frontend',
+    minDetails: [
+      'Click tracking',
+      'Analytics Services',
+      'Website optimizations',
+      'API Integration',
+    ],
+    details: [
+      `Implemented in-house user tracking technology using JQuery to update future improvements /
+      enhancements accordingly.`,
+      `Identified key modules to display on a product detail website for ecommerce purposes, reducing First
+      Meaningful Paint up to 4 seconds.`
+    ],
+    links: [
+      {
+      title: 'Tatooine Frontend Repo' ,
+      link: 'https://github.com/Tatooine-Group-5/Tatooine'
+      },
+    ],
+  },
 ];
+
+export const STAR_PROJECTS = PROJECTS.slice(0, 3);
 
 export const MORE_PROJECTS = {
   first: 'Want to see',

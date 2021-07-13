@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { 
   SECTION_TITLES, 
   DEVICE_MAX, DEVICE_MIN,
-  PROJECTS, 
+  STAR_PROJECTS, 
   MORE_PROJECTS 
 } from "../lib";
 
@@ -17,7 +17,7 @@ const StarProjects = () => {
       </SectionTitle>
       <Line />
       <CollectionProjectBox>
-        { PROJECTS.map((project) => (
+        { STAR_PROJECTS.map((project) => (
           <ProjectBox key={project.title}>
             <ImageBox>
               <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} />
@@ -86,6 +86,7 @@ const SectionBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
     display: flex;
     flex-direction: row;
+    margin-left: 30px;
     //background-color: purple;
   };
 `;

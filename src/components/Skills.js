@@ -81,7 +81,7 @@ const SkillBox = styled.div`
   padding-bottom: 5%;
 
   @media ${DEVICE_MIN.laptop} {
-    margin-top: 150px;
+    margin-top: 10vh;
     margin-left: 30px;
     display: flex;
     flex-wrap: wrap;

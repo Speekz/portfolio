@@ -4,7 +4,7 @@ import { ABOUT_ME, DEVICE_MAX, DEVICE_MIN } from "../lib";
 
 const AboutMe = () => {
   return (
-    <SectionBlock id="about-me">
+    <SectionBox id="about-me">
       <AboutMeBlock>
         <QuestionBlock>
           <AboutMeQuestion>
@@ -26,7 +26,7 @@ const AboutMe = () => {
           </AboutMeAnswer>
         </AnswerBlock>
       </AboutMeBlock>
-    </SectionBlock>
+    </SectionBox>
   )
 }
 
@@ -96,12 +96,12 @@ const AboutMeBlock = styled.div`
   @media ${DEVICE_MIN.laptop} {
     position: relative;
     bottom: 0;
-    top: 600px;
+    top: 57%;
     padding: 0;
   };
 `;
 
-const SectionBlock = styled.div`
+const SectionBox = styled.div`
   height: 50vh;
   position: relative;
   padding 0;
