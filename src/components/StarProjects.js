@@ -17,38 +17,40 @@ const StarProjects = () => {
       </SectionTitle>
       <Line />
       <CollectionProjectBox>
-        { STAR_PROJECTS.map((project) => (
-          <ProjectBox key={project.title}>
-            <ImageBox>
-              <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} />
-            </ImageBox>
-            <ProjectDetailBox>
-              <div>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
-              </div>
-              <ProjectDetailsList>
-                {project.minDetails.map((detail, index) => (
-                  <ProjectMinDetails key={index}>
-                  <span>
-                    {detail}
-                  </span>
-                </ProjectMinDetails>
-                ))}
-                {project.details.map((detail, index) => (
-                  <ProjectDetails key={index}>
+        <MarginBox>
+          { STAR_PROJECTS.map((project, index) => (
+            <ProjectBox key={index} index={index}>
+              <ImageBox>
+                <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} index={index}/>
+              </ImageBox>
+              <ProjectDetailBox>
+                <div>
+                  <ProjectTitle>{project.title}</ProjectTitle>
+                  <ProjectDescription>{project.description}</ProjectDescription>
+                </div>
+                <ProjectDetailsList>
+                  {project.minDetails.map((detail, index) => (
+                    <ProjectMinDetails key={index}>
                     <span>
                       {detail}
                     </span>
-                  </ProjectDetails>
+                  </ProjectMinDetails>
+                  ))}
+                  {project.details.map((detail, index) => (
+                    <ProjectDetails key={index}>
+                      <span>
+                        {detail}
+                      </span>
+                    </ProjectDetails>
+                  ))}
+                </ProjectDetailsList>
+                {project.links.map((links, index) => (
+                  <ProjectLinks key={index} href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
                 ))}
-              </ProjectDetailsList>
-              {project.links.map((links, index) => (
-                <ProjectLinks key={index} href={links.link} target="_blank" rel="noopener noreferrer">{`> ${links.title}`}</ProjectLinks>
-              ))}
-            </ProjectDetailBox>
-          </ProjectBox>
-        ))}
+              </ProjectDetailBox>
+            </ProjectBox>
+          ))}
+        </MarginBox>
       </CollectionProjectBox>
       <MoreProjectsBox>
         <span>
@@ -66,9 +68,11 @@ const StarProjects = () => {
 
 const CollectionProjectBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
-    width: 1200px;
+    width: 1240px;
     margin-left: 60px;
     border-left: 1px solid #aaa;
+    display: flex;
+    flex-direction: column;
   };
 `;
 
@@ -88,6 +92,12 @@ const SectionBox = styled.div`
     flex-direction: row;
     margin-left: 30px;
     //background-color: purple;
+  };
+`;
+
+const MarginBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    margin-top: 8vh;
   };
 `;
 
@@ -136,6 +146,7 @@ const ProjectTitle = styled.h3`
 
   @media ${DEVICE_MIN.laptop} {
     white-space: nowrap;
+    font-size: 2.5em;
   };
 `;
 
@@ -146,12 +157,24 @@ const ProjectBox = styled.div`
   align-items: center;
 
   @media ${DEVICE_MIN.laptop} {
+    padding: 0;
     flex-direction: row;
+    ${({index})=> (index === 1 ? 
+      `margin-left: auto;
+      flex-direction: row-reverse;
+      text-align: right`:
+      "")}
   };
 `;
 
 const ImageBox = styled.div`
   display: flex;
+
+  @media ${DEVICE_MIN.laptop} {
+    justify-content: space-evenly;
+    margin: 0 !important;
+    padding: 0;
+  };
 `;
 
 const MoreProjectsBox = styled.div`
@@ -165,6 +188,10 @@ const MoreProjectsBox = styled.div`
     font-size: 2em;
     padding-left: 0;
     line-height: 0.9;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    margin-top: 15%;
   };
 `;
 
@@ -196,6 +223,14 @@ const ProjectImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+
+  @media ${DEVICE_MIN.laptop} {
+    width: 70%;
+    height: 70%;
+    ${({index}) => ( index === 2? 
+      `margin: 0 100px;
+      width: 30%`: "")}
+  };
 `;
 
 const ProjectDetailsList = styled.ul`
