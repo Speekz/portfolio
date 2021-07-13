@@ -89,6 +89,10 @@ const Menu = styled.div`
     max-height: ${({ menuIsOpen }) => ( menuIsOpen ? "100%" : "0")};
     transition: max-height 0.1s ease-in;
   };
+
+  @media ${DEVICE_MIN.laptop} {
+    margin-top: 15px;
+  };
 `;
 
 const MenuLink = styled.a`

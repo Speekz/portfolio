@@ -95,7 +95,7 @@ const EmailText = styled.a`
 
   @media ${DEVICE_MIN.laptop} {
     position: absolute;
-    top: 50%;
+    top: 52%;
     margin-left: 10px;
   };
 `;
@@ -104,12 +104,13 @@ const EmailInvitation = styled.span`
   display: none;
 
   @media ${DEVICE_MIN.laptop} {
+    text-transform: uppercase;
     font-family: Morton-Thin;
-    font-size: 3em;
+    font-size: 2.5em;
     display: block;
     white-space: nowrap;
     position: absolute;
-    top: 45%;
+    top: 48%;
   };
 `;
 

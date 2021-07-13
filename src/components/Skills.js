@@ -16,20 +16,22 @@ const Skills = () => {
         </span>
       </SectionTitle>
       <Line />
-      <SkillBox> 
-        {SKILL_RANDOM.map((skill, index) => (
-          <SkillText key={index} index={index} highlight={skill.highlight}>
-            {skill.name}
-          </SkillText>
-        ))}
-      </SkillBox>
-      <div>
+      <BoxForLaptop>
+        <SkillBox> 
+          {SKILL_RANDOM.map((skill, index) => (
+            <SkillText key={index} index={index} highlight={skill.highlight}>
+              {skill.name}
+            </SkillText>
+          ))}
+        </SkillBox>
+      </BoxForLaptop>
+      <ResumeBox>
         <Resume href={`/resume/${GENERAL_INFO.resume.reference}`}target="_blank" rel="noopener noreferrer">
           <span>
             {GENERAL_INFO.resume.title}
           </span>
         </Resume>
-      </div>
+      </ResumeBox>
     </SectionBox>
   )
 };
@@ -70,7 +72,8 @@ const SectionBox = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     flex-direction: row;
-    background-color: green;
+    // background-color: green;
+    margin-left: 30px;
   };
 `;
 
@@ -78,12 +81,11 @@ const SkillBox = styled.div`
   padding-bottom: 5%;
 
   @media ${DEVICE_MIN.laptop} {
-    width: 1000px;
+    margin-top: 150px;
+    margin-left: 30px;
     display: flex;
     flex-wrap: wrap;
-    line-height: 0.5;
-    margin-left: 45px;
-    border-left: 1px solid #aaa;
+    align-content: flex-start;
   };
 `;
 
@@ -107,8 +109,7 @@ const SkillText = styled.div`
   };
 
   @media ${DEVICE_MIN.laptop} {
-    //font-size: 9em;
-    white-space: nowrap;
+    font-size: 8em;
   };
 `;
 
@@ -131,6 +132,26 @@ const Resume = styled.a`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 7em;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    top:45%;
+    text-align: center;
+  };
+`;
+
+const BoxForLaptop = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    width: 1500px;
+    margin-left: 45px;
+    border-left: 1px solid #aaa;
+  };
+`;
+
+const ResumeBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    width: 700px;
   };
 `;
 

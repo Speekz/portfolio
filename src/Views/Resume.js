@@ -75,6 +75,8 @@ const Content = styled.div`
     width: auto;
     align-items: stretch;
     flex: 1 1 0;
+    //margin-top: 5%;
+    //height: 90%;
   };
 `;
 
