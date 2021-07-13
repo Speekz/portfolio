@@ -44,6 +44,7 @@ const SectionBox = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     margin: 0;
+    margin-left: 30px;
     height: 100vh;
     width: 600px;
     //background-color: pink;

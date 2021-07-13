@@ -3,15 +3,15 @@ import { SECTION_TITLES, GENERAL_INFO, DEVICE_MIN } from "../lib";
 
 const Social = () => {
   return (
-    <SocialBox id="socials">
+    <SectionBox id="socials">
       <SocialTitle>
         <span>
           {SECTION_TITLES.SOCIAL}
         </span>
       </SocialTitle>
       <Line />
-      <div>
-        <div>
+      <BoxForLaptop>
+        <SocialBox>
           {GENERAL_INFO.socials.map((social, index) => (
             <div>
               <SocialLink key={index} href={social.reference} target="_blank" rel="noopener noreferrer">
@@ -21,9 +21,9 @@ const Social = () => {
               </SocialLink>
             </div>
           ))}
-        </div>
-      </div>
-    </SocialBox>
+        </SocialBox>
+      </BoxForLaptop>
+    </SectionBox>
   )
 };
 
@@ -39,7 +39,7 @@ const Line = styled.hr`
   };
 `;
 
-const SocialBox = styled.div`
+const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -54,6 +54,12 @@ const SocialTitle = styled.h2`
     font-size: 0.7em;
     opacity: 0.5;
   };
+
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 50%;
+    margin-left: 50px;
+  };
 `;
 
 const SocialLink = styled.a`
@@ -62,6 +68,7 @@ const SocialLink = styled.a`
   color: white;
   font-size: 3.5em;
   font-family: Morton-Black;
+  margin-left: 5px;
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 4.5em;
@@ -69,6 +76,22 @@ const SocialLink = styled.a`
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 5.5em;
+  };
+`;
+
+const SocialBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 41%;
+    justify-content: space-between;
+  };
+`;
+
+const BoxForLaptop = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    border-left: 1px solid #aaa;
+    margin-left: 110px;
   };
 `;
 
