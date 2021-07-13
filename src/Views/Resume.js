@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Social from '../components/Social';
 
-import { DEVICE_MAX, DEVICE_MIN } from '../lib';
+import { GENERAL_INFO, DEVICE_MAX, DEVICE_MIN } from '../lib';
 
 const Resume = () => {
   return (
@@ -17,7 +17,7 @@ const Resume = () => {
       <NoiseEffect />
       <NavBar />
       <BackgroundImg>
-        <MainImage src="/images/banner_background.jpg" alt="ESGPLAY Background"/>
+        <MainImage src={`/images/${GENERAL_INFO.backgroundImage.source}`} alt={GENERAL_INFO.backgroundImage.alt}/>
       </BackgroundImg>
       <Content>
         <HeroSection />

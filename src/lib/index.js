@@ -26,6 +26,10 @@ export const GENERAL_INFO = {
     },
   ],
   copyright: 'Copyright © 2021 Johan Bejar. All rights Reserved',
+  backgroundImage: {
+    source: 'banner_background.jpg',
+    alt: 'Portfolio Background',
+  },
 };
 
 export const MENU = [

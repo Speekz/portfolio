@@ -60,6 +60,7 @@ const SectionBox = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     flex-direction: row;
+    background-color: green;
   };
 `;
 
@@ -70,6 +71,7 @@ const SkillBox = styled.div`
     width: 1000px;
     display: flex;
     flex-wrap: wrap;
+    line-height: 0.5;
   };
 `;
 

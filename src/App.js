@@ -4,7 +4,7 @@ import Resume from './Views/Resume';
 
 const App = () => {
   return (
-    <div className="App">
+    <div id="App" className="App">
       <Router>
         <Switch>
           <Route

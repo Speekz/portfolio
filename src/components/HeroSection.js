@@ -4,7 +4,7 @@ import { MENU, DEVICE_MIN } from "../lib";
 
 const HeroSection = () => {
   return (
-    <HeroBox>
+    <SectionBox>
       {MENU.map((item, index) => (
         <MenuLink key={index} href={item.reference}>
           <span>
@@ -12,18 +12,19 @@ const HeroSection = () => {
           </span>
         </MenuLink>
       ))}
-    </HeroBox>
+    </SectionBox>
   );
 };
 
-const HeroBox = styled.div`
+const SectionBox = styled.div`
   display: none;
 
   @media ${DEVICE_MIN.laptop} {
     display: flex;
     flex-direction: column;
     padding: 10vh 0;
-    margin-right: 40vh;
+    margin-right: 300px;
+    background-color: blue;
   };
 `;
 

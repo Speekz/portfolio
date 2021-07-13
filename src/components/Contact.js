@@ -35,6 +35,7 @@ const SectionBox = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     margin: 0;
+    background-color: pink;
   };
 `;
 
