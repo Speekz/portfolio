@@ -48,7 +48,10 @@ const BackgroundImg = styled.div`
   };
 
   @media ${DEVICE_MIN.laptop} {
-    display: none;
+    //display: none;
+    margin-left: 68vh;
+    margin-top: -10vh;
+    z-index: -1;
   };
 `;
 
