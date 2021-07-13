@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { 
   SECTION_TITLES, 
   DEVICE_MAX, DEVICE_MIN,
-  PROJECTS, 
+  STAR_PROJECTS, 
   MORE_PROJECTS 
 } from "../lib";
 
@@ -17,7 +17,7 @@ const StarProjects = () => {
       </SectionTitle>
       <Line />
       <CollectionProjectBox>
-        { PROJECTS.map((project) => (
+        { STAR_PROJECTS.map((project) => (
           <ProjectBox key={project.title}>
             <ImageBox>
               <ProjectImage src={`/images/${project.image.source}`} alt={project.image.alt} />
