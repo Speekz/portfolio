@@ -110,7 +110,7 @@ const EmailInvitation = styled.span`
     display: block;
     white-space: nowrap;
     position: absolute;
-    top: 48%;
+    top: 47%;
   };
 `;
 

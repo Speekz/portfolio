@@ -96,7 +96,7 @@ const AboutMeBlock = styled.div`
   @media ${DEVICE_MIN.laptop} {
     position: relative;
     bottom: 0;
-    top: 600px;
+    top: 55vh;
     padding: 0;
   };
 `;

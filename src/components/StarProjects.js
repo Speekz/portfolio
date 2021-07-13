@@ -86,6 +86,7 @@ const SectionBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
     display: flex;
     flex-direction: row;
+    margin-left: 30px;
     //background-color: purple;
   };
 `;

@@ -30,7 +30,7 @@ const SectionBox = styled.div`
 
 const MenuLink = styled.a`
   font-family: Morton-ExtraBold;
-  font-size: 10.5em;
+  font-size: 9em;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in;
