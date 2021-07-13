@@ -26,9 +26,6 @@ const AboutMe = () => {
           </AboutMeAnswer>
         </AnswerBlock>
       </AboutMeBlock>
-      <PictureBlock>
-        <ProfilePic src={`/images/${ABOUT_ME.profilePic.source}`} alt={ABOUT_ME.profilePic.alt} />
-      </PictureBlock>
     </SectionBlock>
   )
 }
@@ -98,27 +95,10 @@ const AboutMeBlock = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     position: relative;
-    bottom: 0vh;
-    top: 60vh;
+    bottom: 0;
+    top: 600px;
     padding: 0;
   };
-`;
-
-const PictureBlock = styled.div`
-  display: none;
-
-  @media ${DEVICE_MIN.laptop} {
-    display: block;
-    //position: relative;
-    width: 100%;
-    height: 100%;
-  };
-`;
-
-const ProfilePic = styled.img`
-  width: 30%;
-  height: 100%;
-  object-fit: cover;
 `;
 
 const SectionBlock = styled.div`
@@ -131,10 +111,10 @@ const SectionBlock = styled.div`
   };
 
   @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    width: 1000px;
     display: flex;
-    flex-direction: row;
-    flex-basis: auto;
-    flex: 1 1 0;
+    //background-color: yellow;
   };
 `;
 

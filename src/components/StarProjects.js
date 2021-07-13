@@ -16,7 +16,7 @@ const StarProjects = () => {
         </span>
       </SectionTitle>
       <Line />
-      <div>
+      <CollectionProjectBox>
         { PROJECTS.map((project) => (
           <ProjectBox key={project.title}>
             <ImageBox>
@@ -49,7 +49,7 @@ const StarProjects = () => {
             </ProjectDetailBox>
           </ProjectBox>
         ))}
-      </div>
+      </CollectionProjectBox>
       <MoreProjectsBox>
         <span>
           {MORE_PROJECTS.first}
@@ -63,6 +63,14 @@ const StarProjects = () => {
     </SectionBox>
   )
 };
+
+const CollectionProjectBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    width: 1200px;
+    margin-left: 60px;
+    border-left: 1px solid #aaa;
+  };
+`;
 
 const ProjectDetailBox = styled.div`
   width: 100%;
@@ -78,6 +86,7 @@ const SectionBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
     display: flex;
     flex-direction: row;
+    //background-color: purple;
   };
 `;
 
@@ -87,6 +96,10 @@ const Line = styled.hr`
   margin: 0;
   margin-bottom: 1em;
   margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
 `;
 
 const SectionTitle = styled.h2`
@@ -94,15 +107,16 @@ const SectionTitle = styled.h2`
   padding: 0;
   padding-bottom: 0.2em;
   text-transform: uppercase;
+
   span {
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-
-    @media ${DEVICE_MIN.laptop} {
-      transform-origin: center;
-      transform: translate3d(-50.5%,-50%,0), rotate(-90deg);
-    };
+  };
+  
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 50%;
   };
 `;
 
