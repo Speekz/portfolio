@@ -290,13 +290,15 @@ export const SKILLS_LIST = [
 export const SKILL_RANDOM = _.shuffle(SKILLS_LIST);
 
 const screenSize = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px'
+  mobileS: '319px',
+  mobileM: '374px',
+  mobileL: '424px',
+  tablet: '767px',
+  laptop: '1023px',
+  laptopL: '1439px',
+  desktop: '2559px',
+  desktop4k: '3839px',
+  desktop8k: '7679px', 
 };
 
 export const DEVICE_MIN = {
@@ -307,7 +309,8 @@ export const DEVICE_MIN = {
   laptop: `(min-width: ${screenSize.laptop})`,
   laptopL: `(min-width: ${screenSize.laptopL})`,
   desktop: `(min-width: ${screenSize.desktop})`,
-  desktopL: `(min-width: ${screenSize.desktop})`
+  desktop4k: `(min-width: ${screenSize.desktop4k})`,
+  desktop8k: `(min-width: ${screenSize.desktop8k})`,
 };
 
 export const DEVICE_MAX = {
@@ -318,5 +321,6 @@ export const DEVICE_MAX = {
   laptop: `(max-width: ${screenSize.laptop})`,
   laptopL: `(max-width: ${screenSize.laptopL})`,
   desktop: `(max-width: ${screenSize.desktop})`,
-  desktopL: `(max-width: ${screenSize.desktop})`
+  desktop4k: `(max-width: ${screenSize.desktop4k})`,
+  desktop8k: `(max-width: ${screenSize.desktop8k})`,
 };

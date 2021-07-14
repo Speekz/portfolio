@@ -27,18 +27,6 @@ const Social = () => {
   )
 };
 
-const Line = styled.hr`
-  transform-origin 0% 0%;
-  transform: translate(0px, 0px);
-  margin: 0;
-  margin-bottom: 1em;
-  margin-right: 1em;
-
-  @media ${DEVICE_MIN.laptop} {
-    display: none;
-  };
-`;
-
 const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -62,6 +50,34 @@ const SocialTitle = styled.h2`
   };
 `;
 
+const Line = styled.hr`
+  transform-origin 0% 0%;
+  transform: translate(0px, 0px);
+  margin: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
+`;
+
+const BoxForLaptop = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    border-left: 1px solid #aaa;
+    margin-left: 110px;
+  };
+`;
+
+const SocialBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    position: absolute;
+    top: 41%;
+    justify-content: space-between;
+  };
+`;
+
 const SocialLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
@@ -77,21 +93,9 @@ const SocialLink = styled.a`
   @media ${DEVICE_MIN.tablet} {
     font-size: 5.5em;
   };
-`;
 
-const SocialBox = styled.div`
-  @media ${DEVICE_MIN.laptop} {
-    position: absolute;
-    top: 41%;
-    justify-content: space-between;
-  };
-`;
-
-const BoxForLaptop = styled.div`
-  @media ${DEVICE_MIN.laptop} {
-    height: 100vh;
-    border-left: 1px solid #aaa;
-    margin-left: 110px;
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 6em;
   };
 `;
 

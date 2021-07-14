@@ -24,7 +24,6 @@ const SectionBox = styled.div`
     flex-direction: column;
     padding: 10vh 0;
     margin-right: 230px;
-    //background-color: blue;
   };
 `;
 
@@ -48,9 +47,13 @@ const MenuLink = styled.a`
     -webkit-text-stroke: 1px #34AA8D;
   };
 
-  // @media ${DEVICE_MIN.laptopL} {
-  //   font-size: 10em;
-  // };
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 10.5em;
+  };
+
+  @media ${DEVICE_MIN.desktop} {
+    font-size: 11em;
+  };
 `;
 
 export default HeroSection;
