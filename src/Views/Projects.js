@@ -31,6 +31,10 @@ font-size: 4em;
 const GithubLink = styled.a`
   text-decoration: none;
   color: #34AA8D;
+
+  &:hover {
+    color: #FFFFFF;
+  };
 `;
 
 export default Projects;
