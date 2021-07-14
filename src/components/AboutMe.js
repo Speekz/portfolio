@@ -99,6 +99,10 @@ const AboutMeBlock = styled.div`
     top: 57%;
     padding: 0;
   };
+
+  @media ${DEVICE_MIN.desktop} {
+    top: 48%;
+  };
 `;
 
 const SectionBox = styled.div`

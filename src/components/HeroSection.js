@@ -51,6 +51,10 @@ const MenuLink = styled.a`
   @media ${DEVICE_MIN.laptopL} {
     font-size: 10.5em;
   };
+
+  @media ${DEVICE_MIN.desktop} {
+    font-size: 11em;
+  };
 `;
 
 export default HeroSection;
