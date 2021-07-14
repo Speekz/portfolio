@@ -1,18 +1,35 @@
 import React from "react";
+import styled from "styled-components";
 
-import { PROJECTS } from "../lib";
+// import { PROJECTS } from "../lib";
 
 const Projects = () => {
   return (
     <div>
-      HI, here I will post more projects.
-      {PROJECTS.map((project, index) => (
+      <ProjectText> 
+        More detailed projects soon. Check my
+        <GithubLink href={"https://github.com/Speekz"} target="_blank" rel="noopener noreferrer">
+          <span>
+            {` Github `}
+          </span>
+        </GithubLink>
+          for more .
+      </ProjectText>
+      {/* {PROJECTS.map((project, index) => (
         <div key={index}> 
           {project.title}
         </div>
-      ))}
+      ))} */}
     </div>
   )
 };
+
+const ProjectText = styled.span` 
+font-size: 4em;
+`;
+
+const GithubLink = styled.a`
+  color: #34AA8D;
+`;
 
 export default Projects;
