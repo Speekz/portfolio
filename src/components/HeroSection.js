@@ -23,7 +23,7 @@ const SectionBox = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10vh 0;
-    margin-right: 300px;
+    margin-right: 230px;
     //background-color: blue;
   };
 `;
