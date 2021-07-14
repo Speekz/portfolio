@@ -15,7 +15,7 @@ export const GENERAL_INFO = {
     title: '> Resume here',
   },
   email: {
-    text: 'Feel free to hit me up at ',
+    text: 'contact me at ',
     ref: 'johanbejarc@gmail.com',
   },
   socials: [

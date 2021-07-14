@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { 
   SECTION_TITLES, 
-  DEVICE_MAX, DEVICE_MIN,
+  DEVICE_MIN,
   STAR_PROJECTS, 
   MORE_PROJECTS 
 } from "../lib";
@@ -31,17 +31,10 @@ const StarProjects = () => {
                 <ProjectDetailsList>
                   {project.minDetails.map((detail, index) => (
                     <ProjectMinDetails key={index}>
-                    <span>
-                      {detail}
-                    </span>
-                  </ProjectMinDetails>
-                  ))}
-                  {project.details.map((detail, index) => (
-                    <ProjectDetails key={index}>
                       <span>
                         {detail}
                       </span>
-                    </ProjectDetails>
+                    </ProjectMinDetails>
                   ))}
                 </ProjectDetailsList>
                 {project.links.map((links, index) => (
@@ -68,7 +61,7 @@ const StarProjects = () => {
 
 const CollectionProjectBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
-    width: 1240px;
+    width: 1000px;
     margin-left: 60px;
     border-left: 1px solid #aaa;
     display: flex;
@@ -160,9 +153,10 @@ const ProjectBox = styled.div`
     padding: 0;
     flex-direction: row;
     ${({index})=> (index === 1 ? 
-      `margin-left: auto;
-      flex-direction: row-reverse;
-      text-align: right`:
+      `margin-left: 250px;`:
+      "")}
+    ${({index})=> (index === 2 ? 
+      `margin-left: 400px;`:
       "")}
   };
 `;
@@ -235,17 +229,6 @@ const ProjectImage = styled.img`
 
 const ProjectDetailsList = styled.ul`
   list-style-type: none;
-`;
-
-const ProjectDetails = styled.li`
-  span { 
-    position: relative;
-    left: -10px;
-  };
-  
-  @media ${DEVICE_MAX} {
-    display: none;
-  };
 `;
 
 const ProjectMinDetails = styled.li`

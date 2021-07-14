@@ -122,6 +122,10 @@ const Resume = styled.a`
   font-size: 3.5em;
   padding-left: 0;
 
+  &:hover {
+    color: #34AA8D;
+  };
+
   @media ${DEVICE_MIN.mobileM} {
     font-size: 4em;
   };
