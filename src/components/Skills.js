@@ -36,15 +36,13 @@ const Skills = () => {
   )
 };
 
-const Line = styled.hr`
-  transform-origin 0% 0%;
-  transform: translate(0px, 0px);
-  margin: 0;
-  margin-bottom: 1em;
-  margin-right: 1em;
+const SectionBox = styled.div`
+  display: flex;
+  flex-direction: column;
 
   @media ${DEVICE_MIN.laptop} {
-    display: none;
+    flex-direction: row;
+    margin-left: 30px;
   };
 `;
 
@@ -66,14 +64,23 @@ const SectionTitle = styled.h2`
   };
 `;
 
-const SectionBox = styled.div`
-  display: flex;
-  flex-direction: column;
+const Line = styled.hr`
+  transform-origin 0% 0%;
+  transform: translate(0px, 0px);
+  margin: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
 
   @media ${DEVICE_MIN.laptop} {
-    flex-direction: row;
-    // background-color: green;
-    margin-left: 30px;
+    display: none;
+  };
+`;
+
+const BoxForLaptop = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    width: 1500px;
+    margin-left: 45px;
+    border-left: 1px solid #aaa;
   };
 `;
 
@@ -121,6 +128,13 @@ const SkillText = styled.div`
   };
 `;
 
+const ResumeBox = styled.div`
+  @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    width: 700px;
+  };
+`;
+
 const Resume = styled.a`
   position: relative;
   text-decoration: none;
@@ -149,21 +163,6 @@ const Resume = styled.a`
   @media ${DEVICE_MIN.laptop} {
     top:45%;
     text-align: center;
-  };
-`;
-
-const BoxForLaptop = styled.div`
-  @media ${DEVICE_MIN.laptop} {
-    width: 1500px;
-    margin-left: 45px;
-    border-left: 1px solid #aaa;
-  };
-`;
-
-const ResumeBox = styled.div`
-  @media ${DEVICE_MIN.laptop} {
-    height: 100vh;
-    width: 700px;
   };
 `;
 

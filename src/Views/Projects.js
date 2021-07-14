@@ -7,7 +7,7 @@ const Projects = () => {
     <div>
       HI, here I will post more projects.
       {PROJECTS.map((project, index) => (
-        <div> 
+        <div key={index}> 
           {project.title}
         </div>
       ))}

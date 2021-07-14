@@ -25,18 +25,6 @@ const Contact = () => {
   )
 };
 
-const Line = styled.hr`
-  transform-origin 0% 0%;
-  transform: translate(0px, 0px);
-  margin: 0;
-  margin-bottom: 1em;
-  margin-right: 1em;
-
-  @media ${DEVICE_MIN.laptop} {
-    display: none;
-  };
-`;
-
 const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,7 +35,6 @@ const SectionBox = styled.div`
     margin-left: 30px;
     height: 100vh;
     width: 600px;
-    //background-color: pink;
   };
 `;
 
@@ -70,6 +57,18 @@ const ContactTitle = styled.h2`
   };
 `;
 
+const Line = styled.hr`
+  transform-origin 0% 0%;
+  transform: translate(0px, 0px);
+  margin: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
+
+  @media ${DEVICE_MIN.laptop} {
+    display: none;
+  };
+`;
+
 const EmailBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
     display: inline-flex;
@@ -79,6 +78,20 @@ const EmailBox = styled.div`
     height: 100vh;
     align-items: center;
     width: 400px;
+  };
+`;
+
+const EmailInvitation = styled.span`
+  display: none;
+
+  @media ${DEVICE_MIN.laptop} {
+    text-transform: uppercase;
+    font-family: Morton-Thin;
+    font-size: 2.5em;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    top: 47%;
   };
 `;
 
@@ -97,20 +110,6 @@ const EmailText = styled.a`
     position: absolute;
     top: 52%;
     margin-left: 10px;
-  };
-`;
-
-const EmailInvitation = styled.span`
-  display: none;
-
-  @media ${DEVICE_MIN.laptop} {
-    text-transform: uppercase;
-    font-family: Morton-Thin;
-    font-size: 2.5em;
-    display: block;
-    white-space: nowrap;
-    position: absolute;
-    top: 47%;
   };
 `;
 

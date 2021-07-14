@@ -31,6 +31,20 @@ const Resume = () => {
   );
 };
 
+const NoiseEffect = styled.div`
+  animation: grain 6s steps(10) infinite;
+  background-image: url('../images/noise.png');
+  background-repeat: repeat;
+  height: 300%;
+  left: -50%;
+  opacity: 0.03;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  z-index: 100;
+  pointer-events: none;
+`;
+
 const BackgroundImg = styled.div`
   transform: translateY(0px);
   display: block;
@@ -48,7 +62,6 @@ const BackgroundImg = styled.div`
   };
 
   @media ${DEVICE_MIN.laptop} {
-    //display: none;
     margin-left: 68vh;
     margin-top: -10vh;
     z-index: -1;
@@ -78,23 +91,7 @@ const Content = styled.div`
     width: auto;
     align-items: stretch;
     flex: 1 1 0;
-    //margin-top: 5%;
-    //height: 90%;
   };
-`;
-
-const NoiseEffect = styled.div`
-  animation: grain 6s steps(10) infinite;
-  background-image: url('../images/noise.png');
-  background-repeat: repeat;
-  height: 300%;
-  left: -50%;
-  opacity: 0.03;
-  position: fixed;
-  top: -100%;
-  width: 300%;
-  z-index: 100;
-  pointer-events: none;
 `;
 
 export default Resume;

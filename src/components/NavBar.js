@@ -45,14 +45,46 @@ const NavBar = () => {
   )
 };
 
-const Copyright = styled.div`
-  font-family: Morton-Book;
-  text-transform: uppercase;
-  display: ${({menuIsOpen}) => (menuIsOpen ? "block" : "none")};
+const HeaderBar = styled.header`
+  background-color: ${({menuIsOpen}) => (menuIsOpen ? "#34AA8D" : "transparent")};
+  display: flex;
+  font-size: 1em;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 10;
+  position: fixed;
+  mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
+  width: 85%;
+  height: ${({menuIsOpen}) => (menuIsOpen ? "100vh" : "5vh")};
+  transition: background-color 0.2s ease-in, height 0.3s ease-out;
+
+  @media ${DEVICE_MIN.tablet} {
+    width: 92%;
+  };
 
   @media ${DEVICE_MIN.laptop} {
-    display: none;
+    font-size: 1.2em;
+    background-color: transparent;
+    height: 5vh;
   };
+`;
+
+const HeaderTitle = styled.h1`
+  font-size: 1em;
+  padding: 1.5vh 0 0 0;
+  align-self: flex-start;
+
+  @media ${DEVICE_MIN.laptop} {
+    font-size: 1.2em;
+  };
+`;
+
+const Logo = styled.a`
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const Hamburger = styled.div`
@@ -111,47 +143,14 @@ const MenuLink = styled.a`
   };
 `;
 
-const Logo = styled.a`
-  color: #FFFFFF;
-  text-decoration: none;
+const Copyright = styled.div`
+  font-family: Morton-Book;
   text-transform: uppercase;
-`;
-
-const HeaderTitle = styled.h1`
-  font-size: 1em;
-  padding: 1.5vh 0 0 0;
-  align-self: flex-start;
+  display: ${({menuIsOpen}) => (menuIsOpen ? "block" : "none")};
 
   @media ${DEVICE_MIN.laptop} {
-    font-size: 1.2em;
+    display: none;
   };
 `;
-
-const HeaderBar = styled.header`
-  background-color: ${({menuIsOpen}) => (menuIsOpen ? "#34AA8D" : "transparent")};
-  display: flex;
-  font-size: 1em;
-  padding: 0 2rem;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  z-index: 10;
-  position: fixed;
-  mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
-  width: 85%;
-  height: ${({menuIsOpen}) => (menuIsOpen ? "100vh" : "5vh")};
-  transition: background-color 0.2s ease-in, height 0.3s ease-out;
-
-  @media ${DEVICE_MIN.tablet} {
-    width: 92%;
-  };
-
-  @media ${DEVICE_MIN.laptop} {
-    font-size: 1.2em;
-    background-color: transparent;
-    height: 5vh;
-  };
-`;
-
 
 export default NavBar;

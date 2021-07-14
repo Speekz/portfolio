@@ -30,20 +30,40 @@ const AboutMe = () => {
   )
 }
 
-const HighlightAnswer = styled.span`
-  color: #34AA8D;
+const SectionBox = styled.div`
+  height: 50vh;
+  position: relative;
+  padding 0;
+
+  @media ${DEVICE_MAX.laptop} {
+    padding-top: 50vh;
+  };
+
+  @media ${DEVICE_MIN.laptop} {
+    height: 100vh;
+    width: 1000px;
+    display: flex;
+  };
 `;
 
-const AboutMeAnswer = styled.p`
-  line-height: 1.225;
-  padding: 0 15%;
-  font-size: 0.928em;
-`;
+const AboutMeBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  position: absolute;
+  bottom: 3.125vh;
+  left: 0;
 
-const AnswerBlock = styled.div`
-  text-transform: uppercase;
-  font-family: Morton-light;
-  letter-spacing: 0.1em;
+  @media ${DEVICE_MIN.laptop} {
+    position: relative;
+    bottom: 0;
+    top: 57%;
+    padding: 0;
+  };
+
+  @media ${DEVICE_MIN.desktop} {
+    top: 48%;
+  };
 `;
 
 const QuestionBlock = styled.div`
@@ -85,41 +105,20 @@ const AboutMeQuestionHighlight = styled.div`
   };
 `;
 
-const AboutMeBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 5%;
-  position: absolute;
-  bottom: 3.125vh;
-  left: 0;
-
-  @media ${DEVICE_MIN.laptop} {
-    position: relative;
-    bottom: 0;
-    top: 57%;
-    padding: 0;
-  };
-
-  @media ${DEVICE_MIN.desktop} {
-    top: 48%;
-  };
+const AnswerBlock = styled.div`
+  text-transform: uppercase;
+  font-family: Morton-light;
+  letter-spacing: 0.1em;
 `;
 
-const SectionBox = styled.div`
-  height: 50vh;
-  position: relative;
-  padding 0;
+const AboutMeAnswer = styled.p`
+  line-height: 1.225;
+  padding: 0 15%;
+  font-size: 0.928em;
+`;
 
-  @media ${DEVICE_MAX.laptop} {
-    padding-top: 50vh;
-  };
-
-  @media ${DEVICE_MIN.laptop} {
-    height: 100vh;
-    width: 1000px;
-    display: flex;
-    //background-color: yellow;
-  };
+const HighlightAnswer = styled.span`
+  color: #34AA8D;
 `;
 
 export default AboutMe;
