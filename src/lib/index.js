@@ -65,7 +65,7 @@ export const ABOUT_ME = {
     second: 'Engineer',
   },
   description: {
-    regular: `I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a system engineer allows me to `,
+    regular: `I'm a software developer with a tech stack based in the JavaScript programming language. My experience as a systems engineer allows me to `,
     highlight: 'understand, design, and develop large-scale web applications.',
   },
   profilePic: {
