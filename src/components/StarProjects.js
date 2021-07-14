@@ -267,6 +267,12 @@ const MoreProjectsText = styled.a`
   font-family: Morton-Black;
   font-size: 3em;
   padding-left: 0;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px #FFFFFF;
+  };
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 3.5em;

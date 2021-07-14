@@ -101,6 +101,11 @@ const EmailText = styled.a`
   color: white;
   font-family: Morton-Medium;
   font-size: 1.25em;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: #34AA8D;
+  };
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 2em;

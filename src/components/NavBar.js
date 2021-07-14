@@ -58,7 +58,7 @@ const HeaderBar = styled.header`
   mix-blend-mode: ${({menuIsOpen}) => (menuIsOpen ? "none" : "difference")};
   width: 85%;
   height: ${({menuIsOpen}) => (menuIsOpen ? "100vh" : "5vh")};
-  transition: background-color 0.2s ease-in, height 0.3s ease-out;
+  transition: all 0.2s ease-in;
 
   @media ${DEVICE_MIN.tablet} {
     width: 92%;
@@ -85,6 +85,11 @@ const Logo = styled.a`
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: #34AA8D;
+  };
 `;
 
 const Hamburger = styled.div`
@@ -133,10 +138,14 @@ const MenuLink = styled.a`
   padding: 1rem 0.5rem;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
   color: #FFFFFF;
   align-self: flex-start;
   text-transform: uppercase;
+
+  &:hover {
+    color: #34AA8D;
+  };
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 1em;
