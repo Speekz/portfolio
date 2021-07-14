@@ -87,6 +87,10 @@ const SkillBox = styled.div`
     flex-wrap: wrap;
     align-content: flex-start;
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    margin-top: 5vh;
+  };
 `;
 
 const SkillText = styled.div`
@@ -110,6 +114,10 @@ const SkillText = styled.div`
 
   @media ${DEVICE_MIN.laptop} {
     font-size: 8em;
+  };
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 9em;
   };
 `;
 

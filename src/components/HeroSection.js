@@ -48,9 +48,9 @@ const MenuLink = styled.a`
     -webkit-text-stroke: 1px #34AA8D;
   };
 
-  // @media ${DEVICE_MIN.laptopL} {
-  //   font-size: 10em;
-  // };
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 10.5em;
+  };
 `;
 
 export default HeroSection;

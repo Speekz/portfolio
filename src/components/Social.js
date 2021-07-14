@@ -77,6 +77,10 @@ const SocialLink = styled.a`
   @media ${DEVICE_MIN.tablet} {
     font-size: 5.5em;
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 6em;
+  };
 `;
 
 const SocialBox = styled.div`

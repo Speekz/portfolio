@@ -67,6 +67,10 @@ const CollectionProjectBox = styled.div`
     display: flex;
     flex-direction: column;
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    width: 1100px;
+  };
 `;
 
 const ProjectDetailBox = styled.div`
@@ -141,6 +145,10 @@ const ProjectTitle = styled.h3`
     white-space: nowrap;
     font-size: 2.5em;
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 3em;
+  };
 `;
 
 const ProjectBox = styled.div`
@@ -187,6 +195,10 @@ const MoreProjectsBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
     margin-top: 15%;
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    margin-top: 24%;
+  };
 `;
 
 const MoreProjectsText = styled.a`
@@ -211,6 +223,10 @@ const ProjectDescription = styled.p`
   margin: 0;
   text-transform: uppercase;
   color: #34AA8D;
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 1.15em;
+  };
 `;
 
 const ProjectImage = styled.img`
@@ -225,10 +241,19 @@ const ProjectImage = styled.img`
       `margin: 0 100px;
       width: 30%`: "")}
   };
+
+  @media ${DEVICE_MIN.laptopL} {
+    width: 80%;
+    height: 80%;
+  };
 `;
 
 const ProjectDetailsList = styled.ul`
   list-style-type: none;
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 1.15em;
+  };
 `;
 
 const ProjectMinDetails = styled.li`
@@ -247,6 +272,10 @@ const ProjectLinks = styled.a`
   text-transform: uppercase;
   color: white;
   display: block;
+
+  @media ${DEVICE_MIN.laptopL} {
+    font-size: 1.15em;
+  };
 `;
 
 export default StarProjects;
