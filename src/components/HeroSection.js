@@ -32,7 +32,7 @@ const MenuLink = styled.a`
   font-size: 8.5em;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
   color: #FFFFFF;
   align-self: flex-start;
   text-transform: uppercase;

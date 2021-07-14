@@ -143,6 +143,7 @@ const Resume = styled.a`
   font-family: Morton-Thin;
   font-size: 3.5em;
   padding-left: 0;
+  transition: all 0.1s ease-in;
 
   &:hover {
     color: #34AA8D;

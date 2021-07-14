@@ -85,6 +85,11 @@ const SocialLink = styled.a`
   font-size: 3.5em;
   font-family: Morton-Black;
   margin-left: 5px;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: #34AA8D;
+  };
 
   @media ${DEVICE_MIN.mobileL} {
     font-size: 4.5em;
