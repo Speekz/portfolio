@@ -1,29 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { SECTION_TITLES, GENERAL_INFO, DEVICE_MIN } from "../lib";
+import { SECTION_TITLES, GENERAL_INFO, DEVICE_MIN } from '../lib'
 
 const Contact = () => {
   return (
     <SectionBox id="contact">
       <ContactTitle>
-        <span>
-          {SECTION_TITLES.CONTACT}
-        </span>
+        <span>{SECTION_TITLES.CONTACT}</span>
       </ContactTitle>
-      <Line/>
+      <Line />
       <EmailBox>
-        <EmailInvitation>
-          {GENERAL_INFO.email.text}
-        </EmailInvitation>
+        <EmailInvitation>{GENERAL_INFO.email.text}</EmailInvitation>
         <EmailText href={`mailto:${GENERAL_INFO.email.ref}`}>
-          <span>
-            {GENERAL_INFO.email.ref}
-          </span>
+          <span>{GENERAL_INFO.email.ref}</span>
         </EmailText>
       </EmailBox>
     </SectionBox>
   )
-};
+}
 
 const SectionBox = styled.div`
   display: flex;
@@ -35,27 +29,27 @@ const SectionBox = styled.div`
     margin-left: 30px;
     height: 100vh;
     width: 600px;
-  };
-`;
+  } ;
+`
 
 const ContactTitle = styled.h2`
   margin: 0;
   padding: 0;
   padding-bottom: 0.2em;
   text-transform: uppercase;
-  
+
   span {
     font-family: Morton-Light;
     font-size: 0.7em;
     opacity: 0.5;
-  };
+  }
 
   @media ${DEVICE_MIN.laptop} {
     position: absolute;
     top: 50%;
     white-space: nowrap;
-  };
-`;
+  } ;
+`
 
 const Line = styled.hr`
   transform-origin 0% 0%;
@@ -67,7 +61,7 @@ const Line = styled.hr`
   @media ${DEVICE_MIN.laptop} {
     display: none;
   };
-`;
+`
 
 const EmailBox = styled.div`
   @media ${DEVICE_MIN.laptop} {
@@ -78,8 +72,8 @@ const EmailBox = styled.div`
     height: 100vh;
     align-items: center;
     width: 400px;
-  };
-`;
+  } ;
+`
 
 const EmailInvitation = styled.span`
   display: none;
@@ -92,8 +86,8 @@ const EmailInvitation = styled.span`
     white-space: nowrap;
     position: absolute;
     top: 47%;
-  };
-`;
+  } ;
+`
 
 const EmailText = styled.a`
   text-transform: uppercase;
@@ -104,18 +98,18 @@ const EmailText = styled.a`
   transition: all 0.1s ease-in;
 
   &:hover {
-    color: #34AA8D;
-  };
+    color: #34aa8d;
+  }
 
   @media ${DEVICE_MIN.tablet} {
     font-size: 2em;
-  };
+  }
 
   @media ${DEVICE_MIN.laptop} {
     position: absolute;
     top: 52%;
     margin-left: 10px;
-  };
-`;
+  } ;
+`
 
-export default Contact;
+export default Contact
